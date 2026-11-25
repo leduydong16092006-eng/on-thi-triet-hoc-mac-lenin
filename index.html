@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Ôn Thi Triết Học Mác – Lênin | Sơ Đồ Tư Duy &amp; Trắc Nghiệm 50 Câu</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --target-size: 24px;
+
+      --bg-light: #f3f6fc;
+      --surface-light: #ffffff;
+      --surface-alt-light: #eef2f9;
+      --text-light: #0f172a;
+      --text-muted-light: #475569;
+      --border-light: #94a3b8;
+      --border-subtle-light: #cbd5e1;
+      --accent-light: #1d4ed8;
+      --accent-hover-light: #1e40af;
+      --accent-text-light: #ffffff;
+      --c2-accent-light: #0f766e;
+      --c2-soft-light: #f0fdfa;
+      --c1-soft-light: #eff6ff;
+      --vn-accent-light: #b45309;
+      --vn-soft-light: #fffbeb;
+      --focus-light: #be123c;
+
+      --bg-dark: #090e1a;
+      --surface-dark: #111827;
+      --surface-alt-dark: #1e293b;
+      --text-dark: #f8fafc;
+      --text-muted-dark: #cbd5e1;
+      --border-dark: #64748b;
+      --border-subtle-dark: #334155;
+      --accent-dark: #60a5fa;
+      --accent-hover-dark: #93c5fd;
+      --accent-text-dark: #090e1a;
+      --c2-accent-dark: #2dd4bf;
+      --c2-soft-dark: #042f2e;
+      --c1-soft-dark: #172554;
+      --vn-accent-dark: #fbbf24;
+      --vn-soft-dark: #451a03;
+      --focus-dark: #fb7185;
+
+      --bg: var(--bg-light);
+      --surface: var(--surface-light);
+      --surface-alt: var(--surface-alt-light);
+      --text: var(--text-light);
+      --text-muted: var(--text-muted-light);
+      --border: var(--border-light);
+      --border-subtle: var(--border-subtle-light);
+      --accent: var(--accent-light);
+      --accent-hover: var(--accent-hover-light);
+      --accent-text: var(--accent-text-light);
+      --c2-accent: var(--c2-accent-light);
+      --c2-soft: var(--c2-soft-light);
+      --c1-soft: var(--c1-soft-light);
+      --vn-accent: var(--vn-accent-light);
+      --vn-soft: var(--vn-soft-light);
+      --focus: var(--focus-light);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--bg-dark);
+        --surface: var(--surface-dark);
+        --surface-alt: var(--surface-alt-dark);
+        --text: var(--text-dark);
+        --text-muted: var(--text-muted-dark);
+        --border: var(--border-dark);
+        --border-subtle: var(--border-subtle-dark);
+        --accent: var(--accent-dark);
+        --accent-hover: var(--accent-hover-dark);
+        --accent-text: var(--accent-text-dark);
+        --c2-accent: var(--c2-accent-dark);
+        --c2-soft: var(--c2-soft-dark);
+        --c1-soft: var(--c1-soft-dark);
+        --vn-accent: var(--vn-accent-dark);
+        --vn-soft: var(--vn-soft-dark);
+        --focus: var(--focus-dark);
+      }
+    }
+
+    @supports (color: light-dark(white, black)) {
+      :root {
+        --bg: light-dark(var(--bg-light), var(--bg-dark));
+        --surface: light-dark(var(--surface-light), var(--surface-dark));
+        --surface-alt: light-dark(var(--surface-alt-light), var(--surface-alt-dark));
+        --text: light-dark(var(--text-light), var(--text-dark));
+        --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+        --border: light-dark(var(--border-light), var(--border-dark));
+        --border-subtle: light-dark(var(--border-subtle-light), var(--border-subtle-dark));
+        --accent: light-dark(var(--accent-light), var(--accent-dark));
+        --accent-hover: light-dark(var(--accent-hover-light), var(--accent-hover-dark));
+        --accent-text: light-dark(var(--accent-text-light), var(--accent-text-dark));
+        --c2-accent: light-dark(var(--c2-accent-light), var(--c2-accent-dark));
+        --c2-soft: light-dark(var(--c2-soft-light), var(--c2-soft-dark));
+        --c1-soft: light-dark(var(--c1-soft-light), var(--c1-soft-dark));
+        --vn-accent: light-dark(var(--vn-accent-light), var(--vn-accent-dark));
+        --vn-soft: light-dark(var(--vn-soft-light), var(--vn-soft-dark));
+        --focus: light-dark(var(--focus-light), var(--focus-dark));
+      }
+    }
+
+    @media (pointer: coarse) {
+      :root { --target-size: 44px; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 1.25rem 1rem 2.5rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
+
+    :where(a:any-link, button):focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .hub-shell {
+      max-inline-size: 56rem;
+      margin-inline: auto;
+      container: hub / inline-size;
+    }
+
+    .banner-tip {
+      background: var(--vn-soft);
+      border: 1.5px solid var(--vn-accent);
+      color: var(--text);
+      border-radius: 0.85rem;
+      padding: 0.75rem 1rem;
+      margin-block-end: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1.1rem;
+      padding: 1.5rem 1.6rem;
+      margin-block-end: 1.1rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-block-end: 0.35rem;
+    }
+
+    h1 {
+      margin: 0 0 0.45rem;
+      font-size: clamp(1.45rem, 2.8vw, 2rem);
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+    h2 {
+      margin: 0 0 0.45rem;
+      font-size: 1.18rem;
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+      text-wrap: balance;
+    }
+    p, li { text-wrap: pretty; }
+
+    .subtitle {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-block-end: 1.1rem;
+    }
+
+    @container hub (inline-size > 38rem) {
+      .cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .action-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 1.25rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .action-card.is-mindmap {
+      border-top: 5px solid var(--c2-accent);
+      background: linear-gradient(180deg, var(--c2-soft) 0%, var(--surface) 45%);
+    }
+
+    .action-card.is-quiz {
+      border-top: 5px solid var(--accent);
+      background: linear-gradient(180deg, var(--c1-soft) 0%, var(--surface) 45%);
+    }
+
+    .card-desc {
+      margin: 0;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-block-size: max(var(--target-size), 2.85rem);
+      min-inline-size: var(--target-size);
+      padding: 0.6rem 1.1rem;
+      border-radius: 0.7rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.98rem;
+      background: var(--accent);
+      color: var(--accent-text);
+      border: 1.5px solid var(--accent);
+      text-align: center;
+    }
+
+    .action-card.is-mindmap .btn-link {
+      background: var(--c2-accent);
+      border-color: var(--c2-accent);
+      color: var(--accent-text);
+    }
+
+    .btn-link.is-secondary {
+      background: var(--surface-alt);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .section-box {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 1.15rem 1.35rem;
+      margin-block-end: 1.1rem;
+    }
+
+    .formula-list {
+      margin: 0.5rem 0 0;
+      padding-inline-start: 1.2rem;
+      display: grid;
+      gap: 0.45rem;
+      font-size: 0.94rem;
+    }
+
+    .download-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .page-footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-block-start: 1.25rem;
+    }
+
+    @media (forced-colors: active) {
+      .hero, .action-card, .section-box, .btn-link, .banner-tip {
+        border: 2px solid ButtonText;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hub-shell">
+    <div id="inapp-banner" class="banner-tip" hidden>
+      <strong>Mẹo mở bằng Chrome:</strong> Bạn đang mở từ trình duyệt trong ứng dụng (Zalo/Messenger). Nếu muốn chuyển sang Chrome để ghim ra màn hình chính, hãy chạm vào nút <strong>⋮</strong> (Android) hoặc <strong>⋯</strong> (iPhone) rồi chọn <strong>Mở bằng Chrome / Trình duyệt</strong>.
+    </div>
+
+    <header class="hero">
+      <span class="eyebrow">Bộ công cụ ôn thi cấp tốc • Triết học Mác – Lênin</span>
+      <h1>Ôn Thi Triết Học Mác – Lênin (Hệ Không Chuyên)</h1>
+      <p class="subtitle">Tổng hợp trọn bộ Giáo trình 3 Chương + Thực tiễn vận dụng Học thuyết Hình thái kinh tế – xã hội ở Việt Nam từ 1975 đến nay.</p>
+    </header>
+
+    <main>
+      <nav aria-label="Công cụ học tập chính">
+        <div class="cards-grid">
+          <article class="action-card is-mindmap">
+            <div>
+              <h2>1. Sơ Đồ Tư Duy Toàn Bộ Sách</h2>
+              <p class="card-desc">Tóm tắt toàn bộ Chương 1, 2, 3 và chuyên đề Việt Nam 1975–nay theo nhánh cây màu sắc, công thức nhớ nhanh và ô tìm kiếm từ khóa.</p>
+            </div>
+            <a class="btn-link" href="./So_do_tu_duy_Triet_hoc_Mac_Lenin.html">Mở Sơ Đồ Tư Duy →</a>
+          </article>
+
+          <article class="action-card is-quiz">
+            <div>
+              <h2>2. Bộ Trắc Nghiệm 50 Câu</h2>
+              <p class="card-desc">Gồm 2 chế độ: <strong>Luyện tập chấm ngay</strong> (kèm giải thích chi tiết từng câu) và <strong>Thi thử 45 phút</strong> tính điểm hệ 10 theo từng chương.</p>
+            </div>
+            <a class="btn-link" href="./Trac_nghiem_50_cau_Triet_hoc_Mac_Lenin.html">Làm Trắc Nghiệm 50 Câu →</a>
+          </article>
+        </div>
+      </nav>
+
+      <section class="section-box" aria-labelledby="cheat-heading">
+        <h2 id="cheat-heading">Khung Ghi Nhớ Siêu Tốc Trước Giờ Thi</h2>
+        <ul class="formula-list">
+          <li><strong>Chương 1 (2 – 3 – 3):</strong> 2 mặt vấn đề cơ bản (Bản thể luận &amp; Nhận thức luận) • 3 hình thức CNDV (Chất phác – Siêu hình – Biện chứng) • 3 nguồn gốc lý luận &amp; 3 phát minh KHTN.</li>
+          <li><strong>Chương 2 (5 – 2 – 6 – 3):</strong> Định nghĩa vật chất Lênin (1909: Thực tại khách quan) • 5 hình thức vận động • 2 nguyên lý • 6 cặp phạm trù • 3 quy luật PBCDV (Lượng–Chất, Mâu thuẫn [hạt nhân], Phủ định của phủ định) • Cảm tính → Lý tính → Thực tiễn.</li>
+          <li><strong>Chương 3 &amp; Việt Nam:</strong> Quy luật QHSX phù hợp LLSX (Công cụ LĐ động nhất; Sở hữu TLSX quyết định nhất) • CSHT–KTTT (tránh 2 sai lầm: duy vật tầm thường &amp; duy tâm duy ý chí) • 1975–1986 (QHSX đi trước → khủng hoảng) vs 1986–nay (Đổi mới KTTT định hướng XHCN) • 7 hình thái YTXH &amp; 5 tính độc lập tương đối • Bản chất con người là tổng hòa các quan hệ xã hội.</li>
+        </ul>
+      </section>
+
+      <section class="section-box" aria-labelledby="download-heading">
+        <div class="download-row">
+          <div>
+            <h3 id="download-heading">Bản Tóm Tắt Đầy Đủ (File Word &amp; Markdown)</h3>
+            <p class="card-desc">Tải về máy để đọc chi tiết hoặc in giấy khổ A4.</p>
+          </div>
+          <a class="btn-link is-secondary" href="./Tom_tat_toan_bo_Giao_trinh_Triet_hoc_Mac_Lenin.docx" download>Tải Bản Tóm Tắt (.docx)</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      Bám sát Giáo trình Triết học Mác – Lênin (Bộ GD&amp;ĐT – NXB Chính trị quốc gia Sự thật)
+    </footer>
+  </div>
+
+  <script>
+    if (/Zalo|FBAN|FBAV|Messenger/i.test(navigator.userAgent)) {
+      const banner = document.getElementById('inapp-banner');
+      if (banner) banner.hidden = false;
+    }
+  </script>
+</body>
+</html>

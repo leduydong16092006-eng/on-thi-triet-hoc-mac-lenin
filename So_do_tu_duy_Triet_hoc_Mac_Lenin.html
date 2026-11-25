@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Sơ Đồ Tư Duy Toàn Bộ Giáo Trình Triết Học Mác – Lênin</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --target-size: 24px;
+
+      /* Light tokens */
+      --bg-light: #f3f6fc;
+      --surface-light: #ffffff;
+      --surface-alt-light: #eef2f9;
+      --text-light: #0f172a;
+      --text-muted-light: #475569;
+      --border-light: #94a3b8;
+      --border-subtle-light: #cbd5e1;
+      --focus-light: #be123c;
+
+      --root-bg-light: #1e293b;
+      --root-fg-light: #ffffff;
+
+      --c1-accent-light: #1d4ed8;
+      --c1-soft-light: #eff6ff;
+      --c1-border-light: #60a5fa;
+
+      --c2-accent-light: #0f766e;
+      --c2-soft-light: #f0fdfa;
+      --c2-border-light: #2dd4bf;
+
+      --c3-accent-light: #7c3aed;
+      --c3-soft-light: #f5f3ff;
+      --c3-border-light: #a78bfa;
+
+      --vn-accent-light: #b45309;
+      --vn-soft-light: #fffbeb;
+      --vn-border-light: #fbbf24;
+
+      /* Dark tokens */
+      --bg-dark: #090e1a;
+      --surface-dark: #111827;
+      --surface-alt-dark: #1e293b;
+      --text-dark: #f8fafc;
+      --text-muted-dark: #cbd5e1;
+      --border-dark: #64748b;
+      --border-subtle-dark: #334155;
+      --focus-dark: #fb7185;
+
+      --root-bg-dark: #e2e8f0;
+      --root-fg-dark: #0f172a;
+
+      --c1-accent-dark: #60a5fa;
+      --c1-soft-dark: #172554;
+      --c1-border-dark: #3b82f6;
+
+      --c2-accent-dark: #2dd4bf;
+      --c2-soft-dark: #042f2e;
+      --c2-border-dark: #14b8a6;
+
+      --c3-accent-dark: #c4b5fd;
+      --c3-soft-dark: #2e1065;
+      --c3-border-dark: #8b5cf6;
+
+      --vn-accent-dark: #fbbf24;
+      --vn-soft-dark: #451a03;
+      --vn-border-dark: #d97706;
+
+      /* Active variables (light default + dark media fallback) */
+      --bg: var(--bg-light);
+      --surface: var(--surface-light);
+      --surface-alt: var(--surface-alt-light);
+      --text: var(--text-light);
+      --text-muted: var(--text-muted-light);
+      --border: var(--border-light);
+      --border-subtle: var(--border-subtle-light);
+      --focus: var(--focus-light);
+      --root-bg: var(--root-bg-light);
+      --root-fg: var(--root-fg-light);
+      --c1-accent: var(--c1-accent-light);
+      --c1-soft: var(--c1-soft-light);
+      --c1-border: var(--c1-border-light);
+      --c2-accent: var(--c2-accent-light);
+      --c2-soft: var(--c2-soft-light);
+      --c2-border: var(--c2-border-light);
+      --c3-accent: var(--c3-accent-light);
+      --c3-soft: var(--c3-soft-light);
+      --c3-border: var(--c3-border-light);
+      --vn-accent: var(--vn-accent-light);
+      --vn-soft: var(--vn-soft-light);
+      --vn-border: var(--vn-border-light);
+      --scrollbar-track: #e2e8f0;
+      --scrollbar-thumb: #64748b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--bg-dark);
+        --surface: var(--surface-dark);
+        --surface-alt: var(--surface-alt-dark);
+        --text: var(--text-dark);
+        --text-muted: var(--text-muted-dark);
+        --border: var(--border-dark);
+        --border-subtle: var(--border-subtle-dark);
+        --focus: var(--focus-dark);
+        --root-bg: var(--root-bg-dark);
+        --root-fg: var(--root-fg-dark);
+        --c1-accent: var(--c1-accent-dark);
+        --c1-soft: var(--c1-soft-dark);
+        --c1-border: var(--c1-border-dark);
+        --c2-accent: var(--c2-accent-dark);
+        --c2-soft: var(--c2-soft-dark);
+        --c2-border: var(--c2-border-dark);
+        --c3-accent: var(--c3-accent-dark);
+        --c3-soft: var(--c3-soft-dark);
+        --c3-border: var(--c3-border-dark);
+        --vn-accent: var(--vn-accent-dark);
+        --vn-soft: var(--vn-soft-dark);
+        --vn-border: var(--vn-border-dark);
+        --scrollbar-track: #1e293b;
+        --scrollbar-thumb: #94a3b8;
+      }
+    }
+
+    @supports (color: light-dark(white, black)) {
+      :root {
+        --bg: light-dark(var(--bg-light), var(--bg-dark));
+        --surface: light-dark(var(--surface-light), var(--surface-dark));
+        --surface-alt: light-dark(var(--surface-alt-light), var(--surface-alt-dark));
+        --text: light-dark(var(--text-light), var(--text-dark));
+        --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+        --border: light-dark(var(--border-light), var(--border-dark));
+        --border-subtle: light-dark(var(--border-subtle-light), var(--border-subtle-dark));
+        --focus: light-dark(var(--focus-light), var(--focus-dark));
+        --root-bg: light-dark(var(--root-bg-light), var(--root-bg-dark));
+        --root-fg: light-dark(var(--root-fg-light), var(--root-fg-dark));
+        --c1-accent: light-dark(var(--c1-accent-light), var(--c1-accent-dark));
+        --c1-soft: light-dark(var(--c1-soft-light), var(--c1-soft-dark));
+        --c1-border: light-dark(var(--c1-border-light), var(--c1-border-dark));
+        --c2-accent: light-dark(var(--c2-accent-light), var(--c2-accent-dark));
+        --c2-soft: light-dark(var(--c2-soft-light), var(--c2-soft-dark));
+        --c2-border: light-dark(var(--c2-border-light), var(--c2-border-dark));
+        --c3-accent: light-dark(var(--c3-accent-light), var(--c3-accent-dark));
+        --c3-soft: light-dark(var(--c3-soft-light), var(--c3-soft-dark));
+        --c3-border: light-dark(var(--c3-border-light), var(--c3-border-dark));
+        --vn-accent: light-dark(var(--vn-accent-light), var(--vn-accent-dark));
+        --vn-soft: light-dark(var(--vn-soft-light), var(--vn-soft-dark));
+        --vn-border: light-dark(var(--vn-border-light), var(--vn-border-dark));
+        --scrollbar-track: light-dark(#e2e8f0, #1e293b);
+        --scrollbar-thumb: light-dark(#64748b, #94a3b8);
+      }
+    }
+
+    @media (pointer: coarse) {
+      :root { --target-size: 44px; }
+    }
+
+    :root {
+      accent-color: var(--c1-accent);
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 1rem 1rem 2rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      overflow-wrap: break-word;
+    }
+
+    .skip-link:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+    .skip-link:focus {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 200;
+      padding: 0.55rem 0.9rem;
+      background: var(--root-bg);
+      color: var(--root-fg);
+      border-radius: 0.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    :where(a:any-link, button, summary, input):focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .app-shell {
+      max-inline-size: 86rem;
+      margin-inline: auto;
+      container: map-shell / inline-size;
+    }
+
+    .page-header {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 1.1rem 1.35rem;
+      margin-block-end: 0.9rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--c1-accent);
+      margin-block-end: 0.25rem;
+    }
+
+    h1 {
+      margin: 0 0 0.25rem;
+      font-size: clamp(1.3rem, 2.3vw, 1.75rem);
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+    h2 {
+      margin: 0 0 0.6rem;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+    p, li { text-wrap: pretty; }
+
+    .subtitle {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Quick Memory Formula Strip */
+    .cheat-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+      gap: 0.55rem;
+      margin-block-end: 0.9rem;
+    }
+    .cheat-pill {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-inline-start: 4px solid var(--c1-accent);
+      border-radius: 0.7rem;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.84rem;
+    }
+    .cheat-pill[data-ch="2"] { border-inline-start-color: var(--c2-accent); }
+    .cheat-pill[data-ch="3"] { border-inline-start-color: var(--c3-accent); }
+    .cheat-pill[data-ch="vn"] { border-inline-start-color: var(--vn-accent); }
+    .cheat-pill strong { display: block; font-size: 0.85rem; }
+
+    /* Toolbar */
+    .controls-bar {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 0.95rem;
+      padding: 0.75rem 1rem;
+      margin-block-end: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.9rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      min-block-size: var(--target-size);
+      min-inline-size: var(--target-size);
+      padding: 0.4rem 0.78rem;
+      border-radius: 0.6rem;
+      border: 1.5px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+    }
+    button:hover:not(:disabled) { border-color: var(--c1-accent); }
+    button[aria-pressed="true"] {
+      background: var(--root-bg);
+      color: var(--root-fg);
+      border-color: var(--root-bg);
+    }
+
+    search {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .search-input {
+      min-block-size: var(--target-size);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.6rem;
+      border: 1.5px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      min-inline-size: 14rem;
+    }
+
+    /* Main split area */
+    .workspace {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      align-items: start;
+    }
+
+    @container map-shell (inline-size > 60rem) {
+      .workspace {
+        grid-template-columns: 1fr 22rem;
+      }
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    /* Visual Map Canvas */
+    .map-viewport {
+      position: relative;
+      block-size: min(72vh, 44rem);
+      min-block-size: 26rem;
+      overflow: auto;
+      background-image: radial-gradient(var(--border-subtle) 1px, transparent 1px);
+      background-size: 20px 20px;
+      padding: 1rem;
+    }
+
+    .map-stage {
+      position: relative;
+      transform-origin: 0 0;
+      min-inline-size: max-content;
+    }
+
+    .map-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    /* Horizontal Tree Layout inside Visual Map */
+    .tree-node-row {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      margin-block: 0.32rem;
+    }
+
+    .tree-children {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .node-card {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      max-inline-size: 20rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.7rem;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-align: left;
+      font-size: 0.87rem;
+      line-height: 1.35;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+      flex-shrink: 0;
+    }
+
+    .node-card[data-level="0"] {
+      background: var(--root-bg);
+      color: var(--root-fg);
+      border-color: var(--root-bg);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 0.75rem 1.1rem;
+      max-inline-size: 15rem;
+    }
+
+    .node-card[data-theme="c1"] { border-color: var(--c1-border); background: var(--c1-soft); }
+    .node-card[data-theme="c2"] { border-color: var(--c2-border); background: var(--c2-soft); }
+    .node-card[data-theme="c3"] { border-color: var(--c3-border); background: var(--c3-soft); }
+    .node-card[data-theme="vn"] { border-color: var(--vn-border); background: var(--vn-soft); }
+
+    .node-card[data-level="1"][data-theme="c1"] { border-inline-start: 5px solid var(--c1-accent); font-weight: 800; }
+    .node-card[data-level="1"][data-theme="c2"] { border-inline-start: 5px solid var(--c2-accent); font-weight: 800; }
+    .node-card[data-level="1"][data-theme="c3"] { border-inline-start: 5px solid var(--c3-accent); font-weight: 800; }
+
+    .node-card.is-selected {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .node-card.is-match {
+      box-shadow: 0 0 0 3px var(--vn-accent);
+    }
+
+    .node-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: 1.35rem;
+      block-size: 1.35rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* Outline Tree View (Native <details>) */
+    .outline-wrap {
+      padding: 1rem 1.2rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    details.branch {
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 0.8rem;
+      padding: 0.45rem 0.75rem;
+      background: var(--surface-alt);
+    }
+    details.branch[data-theme="c1"] { border-inline-start: 4px solid var(--c1-accent); }
+    details.branch[data-theme="c2"] { border-inline-start: 4px solid var(--c2-accent); }
+    details.branch[data-theme="c3"] { border-inline-start: 4px solid var(--c3-accent); }
+    details.branch[data-theme="vn"] { border-inline-start: 4px solid var(--vn-accent); }
+
+    details.branch > summary {
+      cursor: pointer;
+      font-weight: 700;
+      padding: 0.35rem 0.2rem;
+      min-block-size: var(--target-size);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    details.branch > summary::before {
+      content: "▸";
+      display: inline-block;
+      margin-inline-end: 0.4rem;
+      transition: transform 0.15s ease;
+    }
+    details.branch[open] > summary::before {
+      transform: rotate(90deg);
+    }
+    details.branch > summary::-webkit-details-marker { display: none; }
+
+    .branch-body {
+      padding: 0.4rem 0 0.35rem 0.9rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .leaf-card {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0.65rem;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.92rem;
+    }
+    .leaf-card.is-match {
+      border: 2px solid var(--vn-accent);
+      background: var(--vn-soft);
+    }
+    .leaf-title {
+      font-weight: 700;
+      margin-block-end: 0.2rem;
+    }
+    .leaf-hook {
+      display: inline-block;
+      margin-block-start: 0.25rem;
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: var(--vn-accent);
+    }
+
+    /* Side Inspector Memory Card */
+    .inspector {
+      padding: 1rem 1.1rem;
+      position: sticky;
+      top: 0.75rem;
+    }
+    .inspector-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border-subtle);
+      margin-block-end: 0.45rem;
+    }
+    .inspector-list {
+      margin: 0.5rem 0 0;
+      padding-inline-start: 1.1rem;
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.92rem;
+    }
+    .hook-box {
+      margin-block-start: 0.85rem;
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.7rem;
+      background: var(--vn-soft);
+      border: 1.5px solid var(--vn-border);
+      font-size: 0.88rem;
+    }
+
+    mark {
+      background: var(--vn-border);
+      color: #111827;
+      padding: 0 0.15rem;
+      border-radius: 0.2rem;
+    }
+
+    .page-footer {
+      margin-block-start: 1.1rem;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    @media (forced-colors: active) {
+      .panel, .page-header, .controls-bar, .cheat-pill, .node-card, button, details.branch {
+        border: 2px solid ButtonText;
+      }
+      .node-card.is-selected { outline: 3px solid Highlight; }
+    }
+
+    @media print {
+      .controls-bar, .inspector, .skip-link { display: none !important; }
+      .workspace { grid-template-columns: 1fr !important; }
+      .map-viewport { block-size: auto !important; overflow: visible !important; }
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-block-end: 0.75rem;
+    }
+    .top-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-block-size: var(--target-size);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.55rem;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    .top-nav a[aria-current="page"] {
+      border-color: var(--focus);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <a href="#main-map" class="skip-link">Chuyển thẳng tới sơ đồ tư duy</a>
+
+    <nav class="top-nav" aria-label="Điều hướng giữa các trang">
+      <a href="./index.html">← Trang chủ</a>
+      <a href="./So_do_tu_duy_Triet_hoc_Mac_Lenin.html" aria-current="page">Sơ đồ tư duy</a>
+      <a href="./Trac_nghiem_50_cau_Triet_hoc_Mac_Lenin.html">Trắc nghiệm 50 câu</a>
+    </nav>
+    <header class="page-header">
+      <span class="eyebrow">Sơ đồ tư duy ôn thi siêu tốc • Triết học Mác – Lênin</span>
+      <h1>Bản Đồ Kiến Thức Toàn Bộ Giáo Trình (3 Chương + Thực Tiễn Việt Nam)</h1>
+      <p class="subtitle">Cô đọng toàn bộ file tóm tắt thành cấu trúc nhánh cây, con số chốt và mẹo ghi nhớ nhanh — bấm vào từng nhánh để mở/đóng và xem thẻ giải thích chi tiết.</p>
+    </header>
+
+    <section class="cheat-strip" aria-label="Công thức nhớ nhanh các con số trọng tâm">
+      <div class="cheat-pill" data-ch="1">
+        <strong>Chương 1: 2 – 3 – 3</strong>
+        2 mặt VĐCB • 3 nguồn gốc lý luận • 3 phát minh KHTN • 2 chức năng
+      </div>
+      <div class="cheat-pill" data-ch="2">
+        <strong>Chương 2: 5 – 2 – 6 – 3</strong>
+        5 vận động • 2 nguyên lý • 6 cặp phạm trù • 3 quy luật PBCDV
+      </div>
+      <div class="cheat-pill" data-ch="3">
+        <strong>Chương 3: 3 – 7 – 5</strong>
+        3 yếu tố TTXH • 7 hình thái YTXH • 5 độc lập tương đối • Bản chất người
+      </div>
+      <div class="cheat-pill" data-ch="vn">
+        <strong>Việt Nam: 1975–1986 vs 1986–nay</strong>
+        QHSX đi trước → khủng hoảng • Đổi mới KTTT định hướng XHCN → phát triển
+      </div>
+    </section>
+
+    <section class="controls-bar" aria-label="Điều khiển chế độ xem và tìm kiếm">
+      <div class="toolbar" role="group" aria-label="Chuyển dạng hiển thị">
+        <button type="button" id="view-visual" aria-pressed="true">Sơ đồ nhánh cây (Trực quan)</button>
+        <button type="button" id="view-outline" aria-pressed="false">Cây ghi nhớ (Dễ đọc / Tìm kiếm)</button>
+      </div>
+
+      <div class="toolbar" role="group" aria-label="Thao tác nhánh và thu phóng">
+        <button type="button" id="btn-expand-all">Mở hết nhánh</button>
+        <button type="button" id="btn-collapse-ch">Thu gọn về 3 Chương</button>
+        <button type="button" id="btn-zoom-out" aria-label="Thu nhỏ sơ đồ">−</button>
+        <button type="button" id="btn-zoom-reset">100%</button>
+        <button type="button" id="btn-zoom-in" aria-label="Phóng to sơ đồ">+</button>
+        <button type="button" id="btn-print">In / Lưu PDF</button>
+      </div>
+
+      <search>
+        <label for="search-box" class="visually-hidden">Tìm từ khóa trong sơ đồ</label>
+        <input id="search-box" class="search-input" type="search" placeholder="Tìm nhanh (vd: Lênin, tả khuynh, 1986...)">
+        <button type="button" id="btn-clear-search">Xóa lọc</button>
+      </search>
+    </section>
+
+    <main id="main-map" tabindex="-1">
+      <div id="live-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+      <div class="workspace">
+        <section class="panel" aria-label="Khu vực sơ đồ tư duy">
+          <div id="visual-view" class="map-viewport" tabindex="0" aria-label="Khung cuộn sơ đồ tư duy ngang">
+            <div id="map-stage" class="map-stage">
+              <svg id="map-lines" class="map-lines" aria-hidden="true"></svg>
+              <div id="tree-root"></div>
+            </div>
+          </div>
+
+          <div id="outline-view" class="outline-wrap" hidden></div>
+        </section>
+
+        <aside class="panel inspector" aria-labelledby="inspector-title">
+          <span class="inspector-badge" id="inspector-badge">Thẻ ghi nhớ</span>
+          <h2 id="inspector-title">Triết học Mác – Lênin</h2>
+          <p id="inspector-summary" style="margin: 0; font-size: 0.92rem; color: var(--text-muted);"></p>
+          <ul class="inspector-list" id="inspector-bullets"></ul>
+          <div class="hook-box" id="inspector-hook" hidden></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      Tổng hợp từ toàn bộ Giáo trình Triết học Mác – Lênin (Hệ không chuyên) &amp; Đề cương Thực tiễn Việt Nam 1975–nay • Chạy hoàn toàn ngoại tuyến
+    </footer>
+  </div>
+
+  <script>
+    const MINDMAP = {
+      id: 'root',
+      theme: 'root',
+      title: 'TRIẾT HỌC MÁC – LÊNIN',
+      summary: 'Hệ thống thế giới quan duy vật biện chứng và phương pháp luận khoa học gồm 3 Chương cốt lõi + Thực tiễn vận dụng ở Việt Nam.',
+      bullets: [
+        'Chương 1: Khái luận về triết học & Triết học Mác – Lênin (tr. 11–105)',
+        'Chương 2: Chủ nghĩa duy vật biện chứng – Cốt lõi lý luận (tr. 106–256)',
+        'Chương 3: Chủ nghĩa duy vật lịch sử & Thực tiễn VN 1975–nay (tr. 257–453)'
+      ],
+      hook: 'Mẹo nhớ tổng thể: Chương 1 = Nhập môn & Lịch sử ra đời | Chương 2 = Tự nhiên & Tư duy (Vật chất–Ý thức, PBCDV, Nhận thức) | Chương 3 = Xã hội & Con người.',
+      children: [
+        {
+          id: 'ch1',
+          theme: 'c1',
+          title: 'CHƯƠNG 1: Khái luận Triết học & TH Mác–Lênin',
+          summary: 'Trả lời câu hỏi: Triết học là gì, Vấn đề cơ bản là gì, và Triết học Mác–Lênin ra đời như thế nào?',
+          bullets: [
+            '2 mục lớn: (I) Triết học & Vấn đề cơ bản; (II) Triết học Mác–Lênin & Vai trò.',
+            'Trọng tâm thi: 2 mặt vấn đề cơ bản, 3 hình thức CNDV, 3 nguồn gốc lý luận, 3 phát minh KHTN.'
+          ],
+          hook: 'Từ khóa Chương 1: Yêu thông thái – Tư duy & Tồn tại – Biện chứng vs Siêu hình – 3 nguồn gốc & 3 phát minh.',
+          children: [
+            {
+              id: 'c1-1',
+              theme: 'c1',
+              title: 'I.1. Nguồn gốc & Khái niệm Triết học',
+              summary: 'Triết học ra đời khoảng TK VIII–VI TCN khi tư duy đạt mức trừu tượng hóa và xã hội có phân công lao động.',
+              bullets: [
+                'Nguồn gốc nhận thức: Trừu tượng hóa, khái quát hóa thay tư duy thần thoại.',
+                'Nguồn gốc xã hội: Tách rời lao động trí óc – chân tay + phân chia giai cấp.',
+                'Thuật ngữ: TQ (Triết = trí tuệ), Ấn Độ (Dar’sana = chiêm ngưỡng), Hy Lạp (Philosophia = yêu mến sự thông thái).',
+                'Thế giới quan = Tri thức (cơ sở trực tiếp) + Niềm tin + Lý tưởng; Triết học là hạt nhân lý luận.'
+              ],
+              hook: 'Nhớ nhanh: Tri thức chỉ biến thành thế giới quan khi gắn với NIỀM TIN.'
+            },
+            {
+              id: 'c1-2',
+              theme: 'c1',
+              title: 'I.2. Vấn đề cơ bản của Triết học (2 Mặt)',
+              summary: 'Theo Ph. Ăngghen: Quan hệ giữa Tư duy & Tồn tại (Ý thức & Vật chất).',
+              bullets: [
+                'Mặt 1 (Bản thể luận – cái nào có trước?): CNDV (VC quyết định YT) vs CNDT (YT quyết định VC); Nhất nguyên vs Nhị nguyên (Đềcác).',
+                '3 hình thức CNDV: Chất phác cổ đại (nước, lửa, nguyên tử) → Siêu hình TK XVII–XVIII (cỗ máy) → Biện chứng (đỉnh cao).',
+                '2 hình thức CNDT: Chủ quan (phức hợp cảm giác: Béccli, Hium) vs Khách quan (ý niệm tuyệt đối: Platôn, Hêghen).',
+                'Mặt 2 (Nhận thức luận – có biết được thế giới không?): Thuyết khả tri (biết được) vs Bất khả tri (Cantơ, Hium) & Hoài nghi.'
+              ],
+              hook: 'Mặt 1 = VC hay YT có trước? (chia DV/DT) | Mặt 2 = Có nhận thức được không? (chia Khả tri/Bất khả tri).'
+            },
+            {
+              id: 'c1-3',
+              theme: 'c1',
+              title: 'I.3. Biện chứng & Siêu hình',
+              summary: 'Hai phương pháp tư duy đối lập nhau trong lịch sử triết học.',
+              bullets: [
+                'Phương pháp Siêu hình: Nhìn sự vật cô lập, tách rời, tĩnh tại, nguyên nhân từ bên ngoài.',
+                'Phương pháp Biện chứng: Nhìn sự vật trong liên hệ phổ biến, vận động phát triển do mâu thuẫn bên trong.',
+                '3 hình thức phép biện chứng: Tự phát cổ đại → Duy tâm cổ điển Đức (Hêghen) → Duy vật (Mác–Ăngghen–Lênin).'
+              ],
+              hook: 'Siêu hình = Đứng im, cô lập | Biện chứng = Liên hệ, vận động tự thân.'
+            },
+            {
+              id: 'c1-4',
+              theme: 'c1',
+              title: 'II.1. Điều kiện & Tiền đề ra đời TH Mác',
+              summary: 'Ra đời vào những năm 40 của thế kỷ XIX tại Tây Âu.',
+              bullets: [
+                'KT–XH: CNTB phát triển, giai cấp vô sản xuất hiện độc lập cần lý luận cách mạng.',
+                '3 nguồn gốc lý luận: Triết học cổ điển Đức (Hêghen, Phơbách) • KTCT cổ điển Anh (Smith, Ricardo) • CNXH không tưởng Pháp–Anh.',
+                '3 phát minh KHTN: Bảo toàn & chuyển hóa năng lượng • Học thuyết tế bào • Học thuyết tiến hóa (Darwin).',
+                'Mốc son: Tuyên ngôn của Đảng Cộng sản (2/1848) đánh dấu chủ nghĩa Mác ra đời hoàn chỉnh.'
+              ],
+              hook: 'Combo 3–3: 3 nguồn gốc lý luận (Đức–Anh–Pháp) + 3 phát minh KHTN (Năng lượng–Tế bào–Tiến hóa).'
+            },
+            {
+              id: 'c1-5',
+              theme: 'c1',
+              title: 'II.2–3. Bước ngoặt, Chức năng & Vai trò',
+              summary: 'Cuộc cách mạng trong triết học và sự phát triển ở giai đoạn Lênin + Đổi mới Việt Nam.',
+              bullets: [
+                'Bước ngoặt của Mác: Thống nhất CNDV + PBCDV; sáng tạo CNDVLS; thống nhất lý luận với thực tiễn ("cải tạo thế giới").',
+                'V.I. Lênin (1870–1924): Bảo vệ & phát triển qua CNDV & CNKNPB (1909), Bút ký triết học (1914–1916), Nhà nước & CM (1917), NEP.',
+                '2 chức năng cơ bản: Thế giới quan & Phương pháp luận.',
+                'Vai trò ở VN: Cơ sở lý luận khoa học của công cuộc Đổi mới từ 1986.'
+              ],
+              hook: 'Luận cương Phơbách 11: "Các nhà triết học chỉ giải thích thế giới... vấn đề là cải tạo thế giới".'
+            }
+          ]
+        },
+        {
+          id: 'ch2',
+          theme: 'c2',
+          title: 'CHƯƠNG 2: Chủ nghĩa Duy vật Biện chứng',
+          summary: 'Hạt nhân lý luận gồm 3 trụ cột: Vật chất & Ý thức – Phép biện chứng duy vật (2–6–3) – Lý luận nhận thức.',
+          bullets: [
+            'Mục I: Vật chất (Định nghĩa Lênin, 5 vận động) & Ý thức (2 nguồn gốc, bản chất, kết cấu) + Quan hệ VC–YT.',
+            'Mục II: Phép biện chứng duy vật với 2 Nguyên lý – 6 Cặp phạm trù – 3 Quy luật.',
+            'Mục III: Thực tiễn (3 hình thức), Con đường nhận thức (Cảm tính → Lý tính → Thực tiễn) & 4 tính chất chân lý.'
+          ],
+          hook: 'Thần chú Chương 2: Vật chất (Lênin 1909) – 5 vận động – 2–6–3 PBCDV – Cảm tính → Lý tính → Thực tiễn.',
+          children: [
+            {
+              id: 'c2-1',
+              theme: 'c2',
+              title: 'I.1. Vật chất & Phương thức tồn tại',
+              summary: 'Giải quyết khủng hoảng vật lý học cuối TK XIX – đầu TK XX bằng định nghĩa kinh điển của V.I. Lênin.',
+              bullets: [
+                'Phát minh phá sản CNDV siêu hình: Tia X (1895), Phóng xạ (1896), Điện tử (1897), Khối lượng biến đổi (1901).',
+                'Định nghĩa Lênin (1909): Vật chất là phạm trù triết học chỉ THỰC TẠI KHÁCH QUAN, tồn tại không lệ thuộc vào cảm giác.',
+                '5 hình thức vận động (Ph. Ăngghen): Cơ → Lý → Hóa → Sinh → Xã hội (cao nhất). Vận động tuyệt đối, đứng im tương đối.',
+                'Không gian (3 chiều) & Thời gian (1 chiều) là hình thức tồn tại khách quan; Thế giới thống nhất ở tính vật chất.'
+              ],
+              hook: 'Thuộc tính duy nhất của vật chất theo Lênin: THỰC TẠI KHÁCH QUAN. Thứ tự vận động: Cơ–Lý–Hóa–Sinh–Xã.'
+            },
+            {
+              id: 'c2-2',
+              theme: 'c2',
+              title: 'I.2–3. Ý thức & Quan hệ Vật chất – Ý thức',
+              summary: 'Ý thức là hình ảnh chủ quan của thế giới khách quan, mang bản chất lịch sử – xã hội.',
+              bullets: [
+                '2 nguồn gốc: Tự nhiên (bộ óc + phản ánh) & Xã hội — quyết định trực tiếp (Lao động + Ngôn ngữ "vỏ VC của tư duy").',
+                'Kết cấu: Ngang (Tri thức [cốt lõi], tình cảm, niềm tin, ý chí) • Dọc (tự ý thức, tiềm thức, vô thức).',
+                'Quan hệ: VC quyết định YT (4 mặt); YT tác động lại VC thông qua HOẠT ĐỘNG THỰC TIỄN.',
+                'Nguyên tắc PPL: Tôn trọng tính khách quan + Phát huy tính năng động chủ quan (chống duy ý chí & thụ động).'
+              ],
+              hook: 'Nguồn gốc quyết định trực tiếp: Lao động & Ngôn ngữ | Cốt lõi kết cấu: Tri thức | Cầu nối tác động lại: Thực tiễn.'
+            },
+            {
+              id: 'c2-3',
+              theme: 'c2',
+              title: 'II.2A. Hai Nguyên lý của PBCDV',
+              summary: 'Nền tảng phương pháp luận toàn diện, lịch sử – cụ thể và phát triển.',
+              bullets: [
+                '1. Nguyên lý mối liên hệ phổ biến: Khách quan, Phổ biến, Đa dạng → Quan điểm TOÀN DIỆN & LỊCH SỬ – CỤ THỂ.',
+                '2. Nguyên lý sự phát triển: Khách quan, Phổ biến, Kế thừa, Đa dạng (đi lên từ thấp đến cao) → Quan điểm PHÁT TRIỂN (ủng hộ cái mới, chống bảo thủ).'
+              ],
+              hook: 'Liên hệ → Toàn diện + Lịch sử cụ thể | Phát triển → Đi lên, ủng hộ cái mới.'
+            },
+            {
+              id: 'c2-4',
+              theme: 'c2',
+              title: 'II.2B. Sáu Cặp Phạm Trù cơ bản',
+              summary: 'Phản ánh những mối liên hệ chung nhất của thế giới khách quan.',
+              bullets: [
+                '1. Cái riêng – Cái chung (+ Cái đơn nhất): Cái chung chỉ tồn tại TRONG cái riêng.',
+                '2. Nguyên nhân – Kết quả: Phân biệt nguyên nhân với nguyên cớ (bề ngoài) & điều kiện (xúc tác).',
+                '3. Tất nhiên – Ngẫu nhiên: Tất nhiên vạch đường đi xuyên qua vô số ngẫu nhiên.',
+                '4. Nội dung – Hình thức: Nội dung quyết định hình thức; hình thức tác động lại.',
+                '5. Bản chất – Hiện tượng: Hiện tượng biểu hiện bản chất (đôi khi xuyên tạc thành giả tượng).',
+                '6. Khả năng – Hiện thực: Đủ điều kiện khả năng chuyển hóa thành hiện thực mới.'
+              ],
+              hook: 'Nhớ 6 cặp: Riêng/Chung – Nhân/Quả – Tất/Ngẫu – Nội/Hình – Bản/Hiện – Khả/Thực.'
+            },
+            {
+              id: 'c2-5',
+              theme: 'c2',
+              title: 'II.2C. Ba Quy Luật cơ bản của PBCDV',
+              summary: 'Giải thích Cách thức – Nguồn gốc – Khuynh hướng của mọi sự vận động, phát triển.',
+              bullets: [
+                '1. Quy luật Lượng – Chất (CÁCH THỨC): Độ → Điểm nút → Bước nhảy. Chống TẢ KHUYNH (nôn nóng) & HỮU KHUYNH (trì trệ).',
+                '2. Quy luật Mâu thuẫn (HẠT NHÂN – NGUỒN GỐC, ĐỘNG LỰC): Thống nhất (tương đối) + Đấu tranh (tuyệt đối) giữa các mặt đối lập.',
+                '3. Quy luật Phủ định của phủ định (KHUYNH HƯỚNG): Khách quan & Kế thừa → Đường XOÁY ỐC (tiến lên quanh co).'
+              ],
+              hook: 'Lượng–Chất = Cách thức | Mâu thuẫn = Động lực (Hạt nhân) | Phủ định = Khuynh hướng (Xoáy ốc).'
+            },
+            {
+              id: 'c2-6',
+              theme: 'c2',
+              title: 'III. Lý luận nhận thức & Chân lý',
+              summary: 'Thực tiễn là cơ sở, động lực, mục đích của nhận thức và là tiêu chuẩn duy nhất của chân lý.',
+              bullets: [
+                '3 hình thức thực tiễn: Sản xuất vật chất (cơ bản nhất) • Chính trị–XH • Thực nghiệm khoa học.',
+                'Con đường nhận thức (Lênin): Trực quan sinh động (Cảm giác → Tri giác → Biểu tượng) → Tư duy trừu tượng (Khái niệm → Phán đoán → Suy lý) → Thực tiễn.',
+                '4 tính chất chân lý: Khách quan • Tương đối • Tuyệt đối • Cụ thể (không có chân lý trừu tượng).'
+              ],
+              hook: 'Cảm tính (3): Cảm giác–Tri giác–Biểu tượng | Lý tính (3): Khái niệm–Phán đoán–Suy lý.'
+            }
+          ]
+        },
+        {
+          id: 'ch3',
+          theme: 'c3',
+          title: 'CHƯƠNG 3: Chủ nghĩa Duy vật Lịch sử & Thực tiễn VN',
+          summary: 'Vận dụng CNDVBC vào xã hội loài người: Hình thái KT–XH, Giai cấp–Dân tộc, Nhà nước–CMXH, Ý thức XH, Con người.',
+          bullets: [
+            '5 mục lớn của giáo trình + Chuyên đề Thực tiễn Việt Nam từ 1975 đến nay (từ Đề cương tiểu luận).',
+            'Xương sống toàn chương: Sản xuất vật chất → LLSX–QHSX → CSHT–KTTT → TTXH–YTXH → Con người.'
+          ],
+          hook: 'Mạch logic Chương 3: Kinh tế (LLSX–QHSX, CSHT) quyết định Chính trị–Tinh thần (KTTT, Nhà nước, YTXH), tất cả quy về Con người.',
+          children: [
+            {
+              id: 'c3-1',
+              theme: 'c3',
+              title: 'I.1–4. Học thuyết Hình thái Kinh tế – Xã hội',
+              summary: 'Quy luật cơ bản nhất của lịch sử và con đường phát triển lịch sử – tự nhiên của 5 HTKTXH.',
+              bullets: [
+                'Sản xuất vật chất: Nền tảng xã hội (Mác: ngừng LĐ vài tuần diệt vong; Ăngghen: lao động sáng tạo ra con người).',
+                'LLSX = Người LĐ (quyết định hàng đầu – lao động sống) + TLSX (Công cụ LĐ là ĐỘNG NHẤT, CÁCH MẠNG NHẤT); Khoa học = LLSX trực tiếp.',
+                'QHSX = Sở hữu TLSX (quyết định nhất) + Tổ chức quản lý + Phân phối ("chất xúc tác" kinh tế).',
+                'Quy luật QHSX phù hợp LLSX: LLSX quyết định QHSX; QHSX "đi sau" hoặc "đi trước" giả tạo đều kìm hãm.',
+                'CSHT (tổng thể QHSX) quyết định KTTT (tư tưởng + thiết chế, Nhà nước quyền lực nhất). Tránh 2 sai lầm: Duy vật tầm thường (tuyệt đối KT) & Duy tâm duy ý chí (tuyệt đối CT).',
+                '5 HTKTXH phát triển lịch sử–tự nhiên: Có thể "bỏ qua" chế độ TBCN nếu kế thừa thành tựu LLSX nhân loại.'
+              ],
+              hook: 'Công cụ LĐ = Động nhất | Sở hữu TLSX = Quyết định QHSX | Phân phối = Chất xúc tác | Nhà nước = Quyền lực nhất KTTT.'
+            },
+            {
+              id: 'c3-vn',
+              theme: 'vn',
+              title: 'I.5. Thực tiễn VN 1975 – nay (Bổ sung từ Đề cương)',
+              summary: 'Đối chiếu 2 giai đoạn 1975–1986 (khủng hoảng do vi phạm quy luật) và 1986–nay (Đổi mới thành công).',
+              bullets: [
+                '1975–1986 (Kế hoạch tập trung bao cấp): Đồng nhất CNXH với công hữu thuần nhất (quốc doanh, tập thể); QHSX "đi trước" vượt LLSX thấp kém → khủng hoảng KT–XH. (Tìm tòi bước đầu: HN TW 6 khóa IV [1979], Chỉ thị 100 [1981]).',
+                '1986–nay (Đổi mới từ Đại hội VI – 12/1986): Quá độ lâu dài, bỏ qua chế độ TBCN (Cương lĩnh 1991, 2011); Nghị quyết 10 (1988); Đại hội IX (2001) xác định KTTT định hướng XHCN.',
+                'Đổi mới đồng bộ CSHT–KTTT: Kinh tế là trung tâm, đổi mới chính trị từng bước vững chắc (Hiến pháp 1992, 2013, Nhà nước pháp quyền XHCN); Đại hội XIII (2021) – 3 đột phá chiến lược.',
+                'Kết quả: Xuất khẩu gạo (1989), thu nhập trung bình (2008), gia nhập ASEAN (1995), WTO (2007); thách thức về năng suất, phân hóa giàu nghèo, môi trường.'
+              ],
+              hook: 'Nhớ mốc VN: 1975–1986 = Bao cấp, QHSX đi trước → Khủng hoảng | 1986 (ĐH VI) = Đổi mới | 2001 (ĐH IX) = KTTT định hướng XHCN.'
+            },
+            {
+              id: 'c3-2',
+              theme: 'c3',
+              title: 'II. Giai cấp & Dân tộc',
+              summary: 'Nguồn gốc giai cấp, vai trò đấu tranh giai cấp và đặc thù dân tộc Việt Nam.',
+              bullets: [
+                'Giai cấp (Lênin – Sáng kiến vĩ đại 1919): Nguồn gốc sâu xa (LLSX → của dư) & trực tiếp (TƯ HỮU TLSX).',
+                'Đấu tranh giai cấp: Động lực trực tiếp của lịch sử có đối kháng giai cấp (Kinh tế – Chính trị [cao nhất] – Tư tưởng).',
+                '4 cộng đồng người: Thị tộc → Bộ lạc → Bộ tộc → Dân tộc (5 đặc trưng: lãnh thổ, ngôn ngữ, kinh tế, văn hóa, nhà nước).',
+                'Đặc thù VN & Phương Đông: Dân tộc hình thành SỚM trước CNTB do nhu cầu TRỊ THỦY & CHỐNG NGOẠI XÂM.'
+              ],
+              hook: 'Thứ tự: Thị tộc → Bộ lạc → Bộ tộc → Dân tộc | Đặc thù VN: Trị thủy + Chống giặc.'
+            },
+            {
+              id: 'c3-3',
+              theme: 'c3',
+              title: 'III. Nhà nước & Cách mạng xã hội',
+              summary: 'Bản chất giai cấp của Nhà nước và phân biệt Cách mạng xã hội với cải cách, đảo chính.',
+              bullets: [
+                'Nhà nước: Ra đời trực tiếp do mâu thuẫn giai cấp KHÔNG THỂ ĐIỀU HÒA.',
+                '3 đặc trưng Nhà nước: Quản lý theo LÃNH THỔ (không theo huyết thống), bộ máy cưỡng chế chuyên nghiệp, THUẾ KHÓA.',
+                'Cách mạng xã hội: Thay đổi căn bản chế độ & chính quyền; khác Tiến hóa, Cải cách, ĐẢO CHÍNH (chỉ đổi nhóm cầm quyền).',
+                'Thời cơ CM = Tình thế CM (khách quan) + Nhân tố chủ quan chín muồi.'
+              ],
+              hook: '3 đặc trưng Nhà nước: Lãnh thổ – Cưỡng chế – Thuế | Đảo chính ≠ Cách mạng XH.'
+            },
+            {
+              id: 'c3-4',
+              theme: 'c3',
+              title: 'IV. Tồn tại xã hội & Ý thức xã hội',
+              summary: 'TTXH quyết định YTXH, nhưng YTXH có 5 biểu hiện tính độc lập tương đối.',
+              bullets: [
+                'TTXH gồm 3 yếu tố: Phương thức sản xuất VC (QUYẾT ĐỊNH NHẤT) • Tự nhiên–địa lý • Dân số–mật độ dân số.',
+                'Kết cấu YTXH: Tâm lý XH (tự phát) & Hệ tư tưởng (lý luận có hệ thống).',
+                '7 hình thái YTXH: Chính trị (chi phối), Pháp quyền, Đạo đức, Nghệ thuật/Thẩm mỹ, Tôn giáo (hư ảo, đền bù), Khoa học (LLSX trực tiếp), Triết học (cao nhất).',
+                '5 độc lập tương đối: (1) Lạc hậu hơn; (2) Vượt trước; (3) Kế thừa; (4) Tác động qua lại; (5) Tác động trở lại TTXH.'
+              ],
+              hook: 'Nhớ 5 độc lập tương đối: Lạc hậu – Vượt trước – Kế thừa – Qua lại – Tác động lại.'
+            },
+            {
+              id: 'c3-5',
+              theme: 'c3',
+              title: 'V. Triết học về Con người',
+              summary: 'Bản chất con người, hiện tượng tha hóa và vai trò quyết định của quần chúng nhân dân.',
+              bullets: [
+                'Con người = Thực thể SINH HỌC – XÃ HỘI; vừa là sản phẩm vừa là chủ thể lịch sử.',
+                'Luận cương Phơbách số 6: "Trong tính hiện thực của nó, bản chất con người là TỔNG HÒA NHỮNG QUAN HỆ XÃ HỘI".',
+                'Tha hóa con người: Bắt nguồn từ lao động bị tha hóa dưới chế độ tư hữu TLSX → Giải phóng bằng CMXHCN xóa bỏ tư hữu.',
+                'Quần chúng nhân dân = Chủ thể sáng tạo QUYẾT ĐỊNH lịch sử; Lãnh tụ = Vai trò to lớn (chống sùng bái cá nhân).',
+                'Việt Nam: Con người vừa là MỤC TIÊU, vừa là ĐỘNG LỰC của cách mạng.'
+              ],
+              hook: 'Câu tủ: "Bản chất con người là tổng hòa những quan hệ xã hội" | QCND quyết định lịch sử.'
+            }
+          ]
+        }
+      ]
+    };
+
+    // State
+    let collapsed = new Set(); // node ids whose children are hidden
+    let selectedId = 'root';
+    let currentView = 'visual'; // 'visual' | 'outline'
+    let zoom = 1;
+    let searchQuery = '';
+
+    const el = {
+      viewVisualBtn: document.getElementById('view-visual'),
+      viewOutlineBtn: document.getElementById('view-outline'),
+      visualView: document.getElementById('visual-view'),
+      outlineView: document.getElementById('outline-view'),
+      mapStage: document.getElementById('map-stage'),
+      mapLines: document.getElementById('map-lines'),
+      treeRoot: document.getElementById('tree-root'),
+      btnExpandAll: document.getElementById('btn-expand-all'),
+      btnCollapseCh: document.getElementById('btn-collapse-ch'),
+      btnZoomOut: document.getElementById('btn-zoom-out'),
+      btnZoomReset: document.getElementById('btn-zoom-reset'),
+      btnZoomIn: document.getElementById('btn-zoom-in'),
+      btnPrint: document.getElementById('btn-print'),
+      searchBox: document.getElementById('search-box'),
+      btnClearSearch: document.getElementById('btn-clear-search'),
+      inspectorBadge: document.getElementById('inspector-badge'),
+      inspectorTitle: document.getElementById('inspector-title'),
+      inspectorSummary: document.getElementById('inspector-summary'),
+      inspectorBullets: document.getElementById('inspector-bullets'),
+      inspectorHook: document.getElementById('inspector-hook'),
+      announcer: document.getElementById('live-announcer')
+    };
+
+    function announce(msg) {
+      el.announcer.textContent = '';
+      window.setTimeout(() => { el.announcer.textContent = msg; }, 30);
+    }
+
+    function findNode(node, id) {
+      if (node.id === id) return node;
+      if (!node.children) return null;
+      for (const ch of node.children) {
+        const res = findNode(ch, id);
+        if (res) return res;
+      }
+      return null;
+    }
+
+    function nodeMatches(node, q) {
+      if (!q) return false;
+      const hay = [node.title, node.summary, ...(node.bullets || []), node.hook || ''].join(' ').toLowerCase();
+      return hay.includes(q.toLowerCase());
+    }
+
+    function subtreeMatches(node, q) {
+      if (!q) return false;
+      if (nodeMatches(node, q)) return true;
+      return (node.children || []).some((ch) => subtreeMatches(ch, q));
+    }
+
+    function renderInspector() {
+      const node = findNode(MINDMAP, selectedId) || MINDMAP;
+      const badgeMap = {
+        root: 'Trung tâm bản đồ',
+        c1: 'Chương 1',
+        c2: 'Chương 2',
+        c3: 'Chương 3',
+        vn: 'Thực tiễn Việt Nam 1975–nay'
+      };
+      el.inspectorBadge.textContent = badgeMap[node.theme] || 'Thẻ ghi nhớ';
+      el.inspectorTitle.textContent = node.title;
+      el.inspectorSummary.textContent = node.summary || '';
+      el.inspectorBullets.innerHTML = '';
+      (node.bullets || []).forEach((b) => {
+        const li = document.createElement('li');
+        li.textContent = b;
+        el.inspectorBullets.appendChild(li);
+      });
+      if (node.hook) {
+        el.inspectorHook.hidden = false;
+        el.inspectorHook.textContent = node.hook;
+      } else {
+        el.inspectorHook.hidden = true;
+      }
+    }
+
+    function buildVisualNode(node, level) {
+      const row = document.createElement('div');
+      row.className = 'tree-node-row';
+
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'node-card';
+      card.dataset.id = node.id;
+      card.dataset.level = String(level);
+      card.dataset.theme = node.theme;
+      if (node.id === selectedId) card.classList.add('is-selected');
+      if (searchQuery && nodeMatches(node, searchQuery)) card.classList.add('is-match');
+
+      const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+      const isCollapsed = collapsed.has(node.id) && !(searchQuery && subtreeMatches(node, searchQuery));
+
+      if (hasChildren) {
+        card.setAttribute('aria-expanded', String(!isCollapsed));
+      }
+
+      const labelSpan = document.createElement('span');
+      labelSpan.textContent = node.title;
+      card.appendChild(labelSpan);
+
+      if (hasChildren && level > 0) {
+        const toggleSpan = document.createElement('span');
+        toggleSpan.className = 'node-toggle';
+        toggleSpan.setAttribute('aria-hidden', 'true');
+        toggleSpan.textContent = isCollapsed ? '+' : '−';
+        card.appendChild(toggleSpan);
+      }
+
+      card.addEventListener('click', () => {
+        selectedId = node.id;
+        if (hasChildren && level > 0) {
+          if (collapsed.has(node.id)) collapsed.delete(node.id);
+          else collapsed.add(node.id);
+        }
+        renderInspector();
+        renderVisualTree();
+        announce(`Đang xem nhánh: ${node.title}`);
+      });
+
+      row.appendChild(card);
+
+      if (hasChildren && !isCollapsed) {
+        const childrenCol = document.createElement('div');
+        childrenCol.className = 'tree-children';
+        node.children.forEach((child) => {
+          childrenCol.appendChild(buildVisualNode(child, level + 1));
+        });
+        row.appendChild(childrenCol);
+      }
+
+      return row;
+    }
+
+    function drawConnections() {
+      const svg = el.mapLines;
+      svg.innerHTML = '';
+      const stageRect = el.mapStage.getBoundingClientRect();
+      const scale = zoom || 1;
+      svg.setAttribute('width', String(el.treeRoot.scrollWidth));
+      svg.setAttribute('height', String(el.treeRoot.scrollHeight));
+
+      const strokeMap = {
+        c1: 'var(--c1-accent)',
+        c2: 'var(--c2-accent)',
+        c3: 'var(--c3-accent)',
+        vn: 'var(--vn-accent)',
+        root: 'var(--border)'
+      };
+
+      function walk(node) {
+        const isCollapsed = collapsed.has(node.id) && !(searchQuery && subtreeMatches(node, searchQuery));
+        if (!node.children || isCollapsed) return;
+        const parentBtn = el.treeRoot.querySelector(`[data-id="${node.id}"]`);
+        if (!parentBtn) return;
+        const pr = parentBtn.getBoundingClientRect();
+        const x1 = (pr.right - stageRect.left) / scale;
+        const y1 = (pr.top + pr.height / 2 - stageRect.top) / scale;
+
+        node.children.forEach((child) => {
+          const childBtn = el.treeRoot.querySelector(`[data-id="${child.id}"]`);
+          if (!childBtn) return;
+          const cr = childBtn.getBoundingClientRect();
+          const x2 = (cr.left - stageRect.left) / scale;
+          const y2 = (cr.top + cr.height / 2 - stageRect.top) / scale;
+          const cx = (x1 + x2) / 2;
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', `M ${x1} ${y1} C ${cx} ${y1}, ${cx} ${y2}, ${x2} ${y2}`);
+          path.setAttribute('fill', 'none');
+          path.setAttribute('stroke', strokeMap[child.theme] || 'var(--border)');
+          path.setAttribute('stroke-width', child.theme === 'root' || node.id === 'root' ? '2.8' : '2');
+          path.setAttribute('stroke-linecap', 'round');
+          svg.appendChild(path);
+
+          walk(child);
+        });
+      }
+
+      walk(MINDMAP);
+    }
+
+    function renderVisualTree() {
+      el.treeRoot.innerHTML = '';
+      el.treeRoot.appendChild(buildVisualNode(MINDMAP, 0));
+      el.mapStage.style.transform = `scale(${zoom})`;
+      window.requestAnimationFrame(drawConnections);
+    }
+
+    function highlightText(container, text, query) {
+      if (!query) {
+        container.textContent = text;
+        return;
+      }
+      const lower = text.toLowerCase();
+      const qLower = query.toLowerCase();
+      let idx = 0;
+      let match = lower.indexOf(qLower, idx);
+      if (match === -1) {
+        container.textContent = text;
+        return;
+      }
+      while (match !== -1) {
+        if (match > idx) container.appendChild(document.createTextNode(text.slice(idx, match)));
+        const mk = document.createElement('mark');
+        mk.textContent = text.slice(match, match + query.length);
+        container.appendChild(mk);
+        idx = match + query.length;
+        match = lower.indexOf(qLower, idx);
+      }
+      if (idx < text.length) container.appendChild(document.createTextNode(text.slice(idx)));
+    }
+
+    function buildOutlineBranch(node, level) {
+      if (!node.children || node.children.length === 0) {
+        const card = document.createElement('div');
+        card.className = 'leaf-card';
+        if (searchQuery && nodeMatches(node, searchQuery)) card.classList.add('is-match');
+
+        const title = document.createElement('div');
+        title.className = 'leaf-title';
+        highlightText(title, node.title, searchQuery);
+        card.appendChild(title);
+
+        if (node.summary) {
+          const sum = document.createElement('div');
+          sum.style.color = 'var(--text-muted)';
+          sum.style.fontSize = '0.88rem';
+          highlightText(sum, node.summary, searchQuery);
+          card.appendChild(sum);
+        }
+
+        if (node.bullets && node.bullets.length) {
+          const ul = document.createElement('ul');
+          ul.className = 'inspector-list';
+          node.bullets.forEach((b) => {
+            const li = document.createElement('li');
+            highlightText(li, b, searchQuery);
+            ul.appendChild(li);
+          });
+          card.appendChild(ul);
+        }
+
+        if (node.hook) {
+          const hk = document.createElement('span');
+          hk.className = 'leaf-hook';
+          highlightText(hk, `💡 ${node.hook}`, searchQuery);
+          card.appendChild(hk);
+        }
+
+        return card;
+      }
+
+      const details = document.createElement('details');
+      details.className = 'branch';
+      details.dataset.theme = node.theme;
+      if (!collapsed.has(node.id) || (searchQuery && subtreeMatches(node, searchQuery))) {
+        details.open = true;
+      }
+
+      const summary = document.createElement('summary');
+      const sTitle = document.createElement('span');
+      highlightText(sTitle, node.title, searchQuery);
+      summary.appendChild(sTitle);
+      details.appendChild(summary);
+
+      const body = document.createElement('div');
+      body.className = 'branch-body';
+      node.children.forEach((ch) => {
+        body.appendChild(buildOutlineBranch(ch, level + 1));
+      });
+      details.appendChild(body);
+      return details;
+    }
+
+    function renderOutline() {
+      el.outlineView.innerHTML = '';
+      MINDMAP.children.forEach((ch) => {
+        el.outlineView.appendChild(buildOutlineBranch(ch, 1));
+      });
+    }
+
+    function syncViews() {
+      el.viewVisualBtn.setAttribute('aria-pressed', String(currentView === 'visual'));
+      el.viewOutlineBtn.setAttribute('aria-pressed', String(currentView === 'outline'));
+      el.visualView.hidden = currentView !== 'visual';
+      el.outlineView.hidden = currentView !== 'outline';
+      if (currentView === 'visual') renderVisualTree();
+      else renderOutline();
+    }
+
+    el.viewVisualBtn.addEventListener('click', () => {
+      currentView = 'visual';
+      syncViews();
+      announce('Đã chuyển sang Sơ đồ nhánh cây trực quan.');
+    });
+
+    el.viewOutlineBtn.addEventListener('click', () => {
+      currentView = 'outline';
+      syncViews();
+      announce('Đã chuyển sang Cây ghi nhớ dễ đọc.');
+    });
+
+    el.btnExpandAll.addEventListener('click', () => {
+      collapsed.clear();
+      syncViews();
+      announce('Đã mở toàn bộ các nhánh.');
+    });
+
+    el.btnCollapseCh.addEventListener('click', () => {
+      collapsed = new Set(['ch1', 'ch2', 'ch3']);
+      syncViews();
+      announce('Đã thu gọn về 3 nhánh Chương.');
+    });
+
+    el.btnZoomIn.addEventListener('click', () => {
+      zoom = Math.min(1.4, Number((zoom + 0.1).toFixed(2)));
+      el.btnZoomReset.textContent = `${Math.round(zoom * 100)}%`;
+      el.mapStage.style.transform = `scale(${zoom})`;
+      window.requestAnimationFrame(drawConnections);
+    });
+
+    el.btnZoomOut.addEventListener('click', () => {
+      zoom = Math.max(0.6, Number((zoom - 0.1).toFixed(2)));
+      el.btnZoomReset.textContent = `${Math.round(zoom * 100)}%`;
+      el.mapStage.style.transform = `scale(${zoom})`;
+      window.requestAnimationFrame(drawConnections);
+    });
+
+    el.btnZoomReset.addEventListener('click', () => {
+      zoom = 1;
+      el.btnZoomReset.textContent = '100%';
+      el.mapStage.style.transform = 'scale(1)';
+      window.requestAnimationFrame(drawConnections);
+    });
+
+    el.btnPrint.addEventListener('click', () => {
+      window.print();
+    });
+
+    el.searchBox.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      syncViews();
+    });
+
+    el.btnClearSearch.addEventListener('click', () => {
+      searchQuery = '';
+      el.searchBox.value = '';
+      syncViews();
+      announce('Đã xóa bộ lọc tìm kiếm.');
+    });
+
+    window.addEventListener('resize', () => {
+      if (currentView === 'visual') drawConnections();
+    });
+
+    renderInspector();
+    syncViews();
+  </script>
+</body>
+</html>

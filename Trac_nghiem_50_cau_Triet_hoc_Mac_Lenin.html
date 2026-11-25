@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Trắc Nghiệm 50 Câu Ôn Thi Triết Học Mác – Lênin</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --target-size: 24px;
+
+      /* Light palette (high contrast >= 4.5:1 text, >= 3:1 UI) */
+      --bg-light: #f4f6fb;
+      --surface-light: #ffffff;
+      --surface-alt-light: #eef2f9;
+      --text-light: #111827;
+      --text-muted-light: #475569;
+      --border-light: #94a3b8;
+      --border-subtle-light: #cbd5e1;
+      --accent-light: #1d4ed8;
+      --accent-hover-light: #1e40af;
+      --accent-text-light: #ffffff;
+      --accent-soft-light: #dbeafe;
+      --ok-bg-light: #ecfdf5;
+      --ok-border-light: #047857;
+      --ok-text-light: #065f46;
+      --bad-bg-light: #fef2f2;
+      --bad-border-light: #b91c1c;
+      --bad-text-light: #991b1b;
+      --warn-bg-light: #fffbeb;
+      --warn-border-light: #b45309;
+      --warn-text-light: #92400e;
+      --focus-light: #be123c;
+
+      /* Dark palette (high contrast >= 4.5:1 text, >= 3:1 UI) */
+      --bg-dark: #0b1120;
+      --surface-dark: #111827;
+      --surface-alt-dark: #1e293b;
+      --text-dark: #f8fafc;
+      --text-muted-dark: #cbd5e1;
+      --border-dark: #64748b;
+      --border-subtle-dark: #334155;
+      --accent-dark: #60a5fa;
+      --accent-hover-dark: #93c5fd;
+      --accent-text-dark: #0b1120;
+      --accent-soft-dark: #1e3a8a;
+      --ok-bg-dark: #052e16;
+      --ok-border-dark: #34d399;
+      --ok-text-dark: #a7f3d0;
+      --bad-bg-dark: #450a0a;
+      --bad-border-dark: #f87171;
+      --bad-text-dark: #fecaca;
+      --warn-bg-dark: #451a03;
+      --warn-border-dark: #fbbf24;
+      --warn-text-dark: #fde68a;
+      --focus-dark: #fb7185;
+
+      /* Default Light assignment + prefers-color-scheme fallback */
+      --bg: var(--bg-light);
+      --surface: var(--surface-light);
+      --surface-alt: var(--surface-alt-light);
+      --text: var(--text-light);
+      --text-muted: var(--text-muted-light);
+      --border: var(--border-light);
+      --border-subtle: var(--border-subtle-light);
+      --accent: var(--accent-light);
+      --accent-hover: var(--accent-hover-light);
+      --accent-text: var(--accent-text-light);
+      --accent-soft: var(--accent-soft-light);
+      --ok-bg: var(--ok-bg-light);
+      --ok-border: var(--ok-border-light);
+      --ok-text: var(--ok-text-light);
+      --bad-bg: var(--bad-bg-light);
+      --bad-border: var(--bad-border-light);
+      --bad-text: var(--bad-text-light);
+      --warn-bg: var(--warn-bg-light);
+      --warn-border: var(--warn-border-light);
+      --warn-text: var(--warn-text-light);
+      --focus: var(--focus-light);
+      --scrollbar-track: #e2e8f0;
+      --scrollbar-thumb: #64748b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--bg-dark);
+        --surface: var(--surface-dark);
+        --surface-alt: var(--surface-alt-dark);
+        --text: var(--text-dark);
+        --text-muted: var(--text-muted-dark);
+        --border: var(--border-dark);
+        --border-subtle: var(--border-subtle-dark);
+        --accent: var(--accent-dark);
+        --accent-hover: var(--accent-hover-dark);
+        --accent-text: var(--accent-text-dark);
+        --accent-soft: var(--accent-soft-dark);
+        --ok-bg: var(--ok-bg-dark);
+        --ok-border: var(--ok-border-dark);
+        --ok-text: var(--ok-text-dark);
+        --bad-bg: var(--bad-bg-dark);
+        --bad-border: var(--bad-border-dark);
+        --bad-text: var(--bad-text-dark);
+        --warn-bg: var(--warn-bg-dark);
+        --warn-border: var(--warn-border-dark);
+        --warn-text: var(--warn-text-dark);
+        --focus: var(--focus-dark);
+        --scrollbar-track: #1e293b;
+        --scrollbar-thumb: #94a3b8;
+      }
+    }
+
+    @supports (color: light-dark(white, black)) {
+      :root {
+        --bg: light-dark(var(--bg-light), var(--bg-dark));
+        --surface: light-dark(var(--surface-light), var(--surface-dark));
+        --surface-alt: light-dark(var(--surface-alt-light), var(--surface-alt-dark));
+        --text: light-dark(var(--text-light), var(--text-dark));
+        --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+        --border: light-dark(var(--border-light), var(--border-dark));
+        --border-subtle: light-dark(var(--border-subtle-light), var(--border-subtle-dark));
+        --accent: light-dark(var(--accent-light), var(--accent-dark));
+        --accent-hover: light-dark(var(--accent-hover-light), var(--accent-hover-dark));
+        --accent-text: light-dark(var(--accent-text-light), var(--accent-text-dark));
+        --accent-soft: light-dark(var(--accent-soft-light), var(--accent-soft-dark));
+        --ok-bg: light-dark(var(--ok-bg-light), var(--ok-bg-dark));
+        --ok-border: light-dark(var(--ok-border-light), var(--ok-border-dark));
+        --ok-text: light-dark(var(--ok-text-light), var(--ok-text-dark));
+        --bad-bg: light-dark(var(--bad-bg-light), var(--bad-bg-dark));
+        --bad-border: light-dark(var(--bad-border-light), var(--bad-border-dark));
+        --bad-text: light-dark(var(--bad-text-light), var(--bad-text-dark));
+        --warn-bg: light-dark(var(--warn-bg-light), var(--warn-bg-dark));
+        --warn-border: light-dark(var(--warn-border-light), var(--warn-border-dark));
+        --warn-text: light-dark(var(--warn-text-light), var(--warn-text-dark));
+        --focus: light-dark(var(--focus-light), var(--focus-dark));
+        --scrollbar-track: light-dark(#e2e8f0, #1e293b);
+        --scrollbar-thumb: light-dark(#64748b, #94a3b8);
+      }
+    }
+
+    @media (pointer: coarse) {
+      :root { --target-size: 44px; }
+    }
+
+    :root {
+      accent-color: var(--accent);
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 1.25rem 1rem 2.5rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
+
+    .skip-link:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 100;
+      padding: 0.6rem 1rem;
+      background: var(--accent);
+      color: var(--accent-text);
+      border-radius: 0.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    :where(a:any-link, button, summary, input, select):focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .app-shell {
+      max-inline-size: 62rem;
+      margin-inline: auto;
+      container: quiz-shell / inline-size;
+    }
+
+    header.page-header {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      margin-block-end: 1rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-block-end: 0.35rem;
+    }
+
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.15rem;
+      line-height: 1.35;
+      text-wrap: balance;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      line-height: 1.35;
+      text-wrap: balance;
+    }
+
+    p, li {
+      text-wrap: pretty;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Controls & Stats */
+    .controls-panel {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      margin-block-end: 1rem;
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .toolbar-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      min-block-size: var(--target-size);
+      min-inline-size: var(--target-size);
+      border-radius: 0.65rem;
+      border: 1.5px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      padding: 0.5rem 0.9rem;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    button:hover:not(:disabled) {
+      border-color: var(--accent);
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .btn-pill[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent);
+    }
+
+    .stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      padding-block-start: 0.75rem;
+      border-block-start: 1px solid var(--border-subtle);
+      font-size: 0.92rem;
+    }
+
+    .stat-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: center;
+    }
+
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 700;
+    }
+
+    .timer-pill {
+      font-variant-numeric: tabular-nums;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: var(--warn-bg);
+      color: var(--warn-text);
+      border: 1.5px solid var(--warn-border);
+      font-weight: 700;
+    }
+
+    /* Layout grid: Question area + Navigator */
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    @container quiz-shell (inline-size > 52rem) {
+      .workspace-grid {
+        grid-template-columns: 1fr 17.5rem;
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 1.25rem 1.4rem;
+    }
+
+    .question-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-block-end: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .question-text {
+      font-size: 1.12rem;
+      font-weight: 700;
+      margin: 0 0 1.1rem;
+      line-height: 1.5;
+    }
+
+    .options-list {
+      display: grid;
+      gap: 0.65rem;
+      margin-block-end: 1rem;
+    }
+
+    .option-btn {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      inline-size: 100%;
+      text-align: left;
+      padding: 0.75rem 0.95rem;
+      min-block-size: max(var(--target-size), 3rem);
+      background: var(--surface-alt);
+      border: 1.5px solid var(--border);
+      border-radius: 0.75rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .option-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: 1.75rem;
+      block-size: 1.75rem;
+      border-radius: 0.45rem;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      font-weight: 800;
+      font-size: 0.88rem;
+      flex-shrink: 0;
+    }
+
+    .option-body {
+      flex: 1;
+      min-inline-size: 0;
+    }
+
+    .option-status {
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .option-btn.is-selected {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+    .option-btn.is-selected .option-key {
+      background: var(--accent);
+      color: var(--accent-text);
+      border-color: var(--accent);
+    }
+
+    .option-btn.is-correct {
+      background: var(--ok-bg);
+      border-color: var(--ok-border);
+      color: var(--ok-text);
+    }
+    .option-btn.is-correct .option-key {
+      background: var(--ok-border);
+      color: #ffffff;
+      border-color: var(--ok-border);
+    }
+
+    .option-btn.is-wrong {
+      background: var(--bad-bg);
+      border-color: var(--bad-border);
+      color: var(--bad-text);
+    }
+    .option-btn.is-wrong .option-key {
+      background: var(--bad-border);
+      color: #ffffff;
+      border-color: var(--bad-border);
+    }
+
+    .explanation-box {
+      padding: 0.9rem 1rem;
+      border-radius: 0.75rem;
+      border-inline-start: 4px solid var(--accent);
+      background: var(--surface-alt);
+      margin-block-end: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .explanation-box.is-correct {
+      border-inline-start-color: var(--ok-border);
+      background: var(--ok-bg);
+      color: var(--ok-text);
+    }
+
+    .explanation-box.is-wrong {
+      border-inline-start-color: var(--bad-border);
+      background: var(--bad-bg);
+      color: var(--bad-text);
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.65rem;
+    }
+
+    /* Question Grid Navigator */
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+      gap: 0.4rem;
+      margin-block-end: 0.85rem;
+    }
+
+    .q-dot {
+      padding: 0.25rem;
+      min-inline-size: max(var(--target-size), 2.5rem);
+      min-block-size: max(var(--target-size), 2.5rem);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .q-dot[aria-current="step"] {
+      outline: 2.5px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    .q-dot.is-answered {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    .q-dot.is-correct {
+      background: var(--ok-bg);
+      border-color: var(--ok-border);
+      color: var(--ok-text);
+    }
+
+    .q-dot.is-wrong {
+      background: var(--bad-bg);
+      border-color: var(--bad-border);
+      color: var(--bad-text);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .summary-banner {
+      background: var(--surface);
+      border: 2px solid var(--accent);
+      border-radius: 1rem;
+      padding: 1.25rem 1.4rem;
+      margin-block-end: 1rem;
+    }
+
+    .summary-score {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 0 0 0.35rem;
+    }
+
+    .chapter-breakdown {
+      display: grid;
+      gap: 0.5rem;
+      margin-block: 0.85rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .review-details {
+      margin-block-start: 1rem;
+      background: var(--surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 1rem;
+      padding: 0.9rem 1.2rem;
+    }
+
+    .review-details summary {
+      font-weight: 700;
+      cursor: pointer;
+      min-block-size: var(--target-size);
+      display: flex;
+      align-items: center;
+    }
+
+    .review-list {
+      display: grid;
+      gap: 0.85rem;
+      margin-block-start: 0.85rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .review-item {
+      padding: 0.85rem 1rem;
+      border-radius: 0.75rem;
+      border: 1.5px solid var(--border-subtle);
+      background: var(--surface-alt);
+    }
+
+    footer.page-footer {
+      margin-block-start: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (forced-colors: active) {
+      .card, header.page-header, .controls-panel, .summary-banner, .option-btn, button {
+        border: 2px solid ButtonText;
+      }
+      .option-btn.is-correct, .q-dot.is-correct {
+        border: 3px solid Highlight;
+      }
+      .option-btn.is-wrong, .q-dot.is-wrong {
+        border: 3px dashed Highlight;
+      }
+      :where(a:any-link, button, summary, input, select):focus-visible {
+        outline: 3px solid Highlight;
+      }
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-block-end: 0.75rem;
+    }
+    .top-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-block-size: var(--target-size);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.55rem;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    .top-nav a[aria-current="page"] {
+      border-color: var(--focus);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <a href="#main-quiz" class="skip-link">Chuyển thẳng tới câu hỏi trắc nghiệm</a>
+
+    <nav class="top-nav" aria-label="Điều hướng giữa các trang">
+      <a href="./index.html">← Trang chủ</a>
+      <a href="./So_do_tu_duy_Triet_hoc_Mac_Lenin.html">Sơ đồ tư duy</a>
+      <a href="./Trac_nghiem_50_cau_Triet_hoc_Mac_Lenin.html" aria-current="page">Trắc nghiệm 50 câu</a>
+    </nav>
+    <header class="page-header">
+      <span class="eyebrow">Học phần Triết học Mác – Lênin • Hệ không chuyên</span>
+      <h1>Bộ 50 Câu Trắc Nghiệm Ôn Thi Toàn Giáo Trình</h1>
+      <p class="subtitle">Bao quát Chương 1, Chương 2, Chương 3 và thực tiễn vận dụng Học thuyết Hình thái kinh tế – xã hội ở Việt Nam từ 1975 đến nay.</p>
+    </header>
+
+    <section class="controls-panel" aria-label="Tùy chọn chế độ và bộ lọc câu hỏi">
+      <div class="toolbar">
+        <div class="toolbar-group" role="group" aria-label="Chế độ làm bài">
+          <button type="button" class="btn-pill" id="mode-practice" aria-pressed="true">Luyện tập (Chấm ngay)</button>
+          <button type="button" class="btn-pill" id="mode-exam" aria-pressed="false">Thi thử 45 phút (Chấm cuối bài)</button>
+        </div>
+        <div class="toolbar-group" role="group" aria-label="Thao tác bài làm">
+          <button type="button" id="btn-shuffle">Xáo thứ tự câu</button>
+          <button type="button" id="btn-reset">Làm lại từ đầu</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-group" role="group" aria-label="Lọc câu hỏi theo chương">
+          <button type="button" class="btn-pill filter-btn" data-filter="all" aria-pressed="true">Tất cả (50)</button>
+          <button type="button" class="btn-pill filter-btn" data-filter="1" aria-pressed="false">Chương 1 (11)</button>
+          <button type="button" class="btn-pill filter-btn" data-filter="2" aria-pressed="false">Chương 2 (18)</button>
+          <button type="button" class="btn-pill filter-btn" data-filter="3" aria-pressed="false">Chương 3 &amp; VN (21)</button>
+          <button type="button" class="btn-pill filter-btn" data-filter="wrong" aria-pressed="false">Câu làm sai</button>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-items">
+          <span class="stat-badge" id="stat-progress">Đã trả lời: 0 / 50</span>
+          <span class="stat-badge" id="stat-score">Đúng: 0</span>
+        </div>
+        <div class="toolbar-group">
+          <span class="timer-pill" id="exam-timer" hidden>45:00</span>
+          <button type="button" class="btn-primary" id="btn-submit-exam" hidden>Nộp bài &amp; Chấm điểm</button>
+        </div>
+      </div>
+    </section>
+
+    <main id="main-quiz" tabindex="-1">
+      <div id="live-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+      <section id="exam-summary" class="summary-banner" hidden tabindex="-1" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Kết quả bài thi thử</h2>
+        <p class="summary-score" id="summary-score-text"></p>
+        <p id="summary-message"></p>
+        <ul class="chapter-breakdown" id="chapter-breakdown"></ul>
+      </section>
+
+      <div class="workspace-grid">
+        <article class="card" aria-labelledby="question-heading">
+          <div class="question-meta">
+            <span id="q-chapter">Chương 1</span>
+            <span id="q-counter">Câu 1 / 50</span>
+          </div>
+          <h2 class="question-text" id="question-heading">Đang tải câu hỏi...</h2>
+          <div class="options-list" id="options-container" role="group" aria-labelledby="question-heading"></div>
+          <div class="explanation-box" id="explanation-box" hidden>
+            <strong id="explanation-status"></strong>
+            <p id="explanation-text" style="margin: 0.35rem 0 0;"></p>
+          </div>
+          <div class="nav-actions">
+            <button type="button" id="btn-prev">← Câu trước</button>
+            <button type="button" class="btn-primary" id="btn-next">Câu tiếp theo →</button>
+          </div>
+        </article>
+
+        <aside class="card" aria-label="Bảng điều hướng 50 câu hỏi">
+          <h3>Danh sách câu hỏi</h3>
+          <div class="nav-grid" id="nav-grid"></div>
+          <div class="legend">
+            <span>✓ Đúng</span>
+            <span>✕ Sai</span>
+            <span>● Đã chọn</span>
+          </div>
+        </aside>
+      </div>
+
+      <details class="review-details" id="all-answers-panel">
+        <summary>Xem nhanh toàn bộ bảng đáp án &amp; giải thích 50 câu</summary>
+        <ol class="review-list" id="review-list"></ol>
+      </details>
+    </main>
+
+    <footer class="page-footer">
+      Bám sát Giáo trình Triết học Mác – Lênin (Hệ không chuyên) • Hoạt động hoàn toàn ngoại tuyến (offline)
+    </footer>
+  </div>
+
+  <script>
+    const QUESTIONS = [{"id": 1, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Theo quan điểm của người Hy Lạp cổ đại, thuật ngữ \"Philosophia\" (Triết học) mang ý nghĩa nào sau đây?", "options": ["Tri thức về giới tự nhiên thuần túy", "Con đường giải thoát khổ đau của con người", "Yêu mến sự thông thái", "Khoa học về các quy luật kinh tế"], "correctIndex": 2, "explanation": "Ở Hy Lạp cổ đại, *Philosophia* nghĩa là \"yêu mến sự thông thái\" (Chương 1, Mục I.1)."}, {"id": 2, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Nguồn gốc xã hội dẫn đến sự ra đời của triết học là gì?", "options": ["Sự xuất hiện của tôn giáo nguyên thủy và thần thoại", "Phân công lao động xã hội dẫn đến sự tách rời lao động trí óc và lao động chân tay, cùng sự phân chia giai cấp", "Nhu cầu trao đổi hàng hóa giữa các quốc gia tư bản", "Sự ra đời của máy móc cơ khí trong cách mạng công nghiệp"], "correctIndex": 1, "explanation": "Nguồn gốc xã hội của triết học: phân công lao động tách rời lao động trí óc – chân tay và xã hội phân chia giai cấp (Chương 1, Mục I.1)."}, {"id": 3, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Yếu tố nào giữ vai trò là cơ sở trực tiếp hình thành thế giới quan, nhưng chỉ trở thành thế giới quan khi gắn liền với niềm tin?", "options": ["Tình cảm", "Tri thức", "Lý tưởng", "Đạo đức"], "correctIndex": 1, "explanation": "Tri thức là cơ sở trực tiếp của thế giới quan, nhưng chỉ gia nhập vào thế giới quan khi biến thành niềm tin (Chương 1, Mục I.1)."}, {"id": 4, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Theo Ph. Ăngghen, vấn đề cơ bản lớn nhất của mọi triết học, đặc biệt là triết học hiện đại là vấn đề quan hệ giữa tư duy và tồn tại (hay ý thức và vật chất). Mặt thứ hai của vấn đề cơ bản này giải quyết câu hỏi nào?", "options": ["Ý thức hay vật chất có trước, cái nào quyết định cái nào?", "Con người có khả năng nhận thức được thế giới hay không?", "Thế giới vận động hay đứng im tuyệt đối?", "Xã hội loài người phát triển theo quy luật nào?"], "correctIndex": 1, "explanation": "Mặt thứ nhất giải quyết bản thể luận (cái nào có trước/quyết định); mặt thứ hai giải quyết nhận thức luận: con người có khả năng nhận thức được thế giới hay không? (Chương 1, Mục I.2)."}, {"id": 5, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Quan điểm triết học coi sự vật, hiện tượng chỉ là \"phức hợp của các cảm giác\" thuộc trường phái nào?", "options": ["Chủ nghĩa duy vật chất phác", "Chủ nghĩa duy vật siêu hình", "Chủ nghĩa duy tâm khách quan", "Chủ nghĩa duy tâm chủ quan"], "correctIndex": 3, "explanation": "CNDT chủ quan đồng nhất sự vật với \"phức hợp cảm giác\" của con người (Béccli, Hium) (Chương 1, Mục I.2)."}, {"id": 6, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Hình thức cao nhất của chủ nghĩa duy vật trong lịch sử là:", "options": ["Chủ nghĩa duy vật chất phác cổ đại", "Chủ nghĩa duy vật siêu hình thế kỷ XVII–XVIII", "Chủ nghĩa duy vật nhân bản của L. Phơbách", "Chủ nghĩa duy vật biện chứng do C. Mác và Ph. Ăngghen sáng lập, V.I. Lênin phát triển"], "correctIndex": 3, "explanation": "CNDV biện chứng là hình thức phát triển cao nhất của CNDV trong lịch sử (Chương 1, Mục I.2)."}, {"id": 7, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Đâu KHÔNG phải là một trong ba hình thức cơ bản của phép biện chứng trong lịch sử?", "options": ["Phép biện chứng tự phát thời cổ đại", "Phép biện chứng kinh viện thời trung cổ", "Phép biện chứng duy tâm cổ điển Đức", "Phép biện chứng duy vật"], "correctIndex": 1, "explanation": "Ba hình thức phép biện chứng: tự phát cổ đại, duy tâm cổ điển Đức, duy vật (Chương 1, Mục I.3)."}, {"id": 8, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Ba nguồn gốc lý luận trực tiếp cho sự ra đời của chủ nghĩa Mác nói chung và triết học Mác nói riêng là:", "options": ["Triết học cổ điển Đức, Kinh tế chính trị học cổ điển Anh, Chủ nghĩa xã hội không tưởng Pháp – Anh", "Triết học Hy Lạp cổ đại, Kinh tế học hiện đại, Chủ nghĩa xã hội dân chủ", "Triết học Ánh sáng Pháp, Thần học trung cổ, Kinh tế chính trị cổ điển Anh", "Triết học duy vật Pháp TK XVIII, Khoa học thực nghiệm, Chủ nghĩa cộng sản nguyên thủy"], "correctIndex": 0, "explanation": "Ba nguồn gốc lý luận: Triết học cổ điển Đức, KTCT học cổ điển Anh, CNXH không tưởng Pháp – Anh (Chương 1, Mục II.1)."}, {"id": 9, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Ba phát minh vĩ đại của khoa học tự nhiên nửa đầu thế kỷ XIX tạo tiền đề khoa học cho sự ra đời của triết học Mác gồm:", "options": ["Thuyết tương đối, Cơ học lượng tử, Phát hiện tia X", "Định luật bảo toàn và chuyển hóa năng lượng, Học thuyết tế bào, Học thuyết tiến hóa của Darwin", "Định luật vạn vật hấp dẫn, Học thuyết nguyên tử Đêmôcrít, Hệ tuần hoàn máu", "Hiện tượng phóng xạ, Phát hiện điện tử, Thuyết Big Bang"], "correctIndex": 1, "explanation": "Ba phát minh KHTN TK XIX: Bảo toàn & chuyển hóa năng lượng, Học thuyết tế bào, Học thuyết tiến hóa Darwin (Chương 1, Mục II.1)."}, {"id": 10, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Tác phẩm nào đánh dấu sự ra đời chính thức của chủ nghĩa Mác với tư cách là một học thuyết khoa học và cách mạng hoàn chỉnh vào tháng 2 năm 1848?", "options": ["Bản thảo kinh tế – triết học 1844", "Luận cương về Phơbách", "Tuyên ngôn của Đảng Cộng sản", "Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán"], "correctIndex": 2, "explanation": "*Tuyên ngôn của Đảng Cộng sản* (2/1848) đánh dấu sự ra đời chính thức của chủ nghĩa Mác hoàn chỉnh (Chương 1, Mục II.1)."}, {"id": 11, "chapterId": 1, "chapter": "Chương 1: Khái luận về triết học & TH Mác – Lênin", "question": "Hai chức năng cơ bản nhất của triết học Mác – Lênin là:", "options": ["Chức năng kinh tế và chức năng chính trị", "Chức năng giáo dục và chức năng giải trí", "Chức năng thế giới quan và chức năng phương pháp luận", "Chức năng dự báo và chức năng thống kê"], "correctIndex": 2, "explanation": "Hai chức năng cơ bản của triết học Mác – Lênin là chức năng thế giới quan và chức năng phương pháp luận (Chương 1, Mục II.2)."}, {"id": 12, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Cuộc cách mạng trong khoa học tự nhiên cuối thế kỷ XIX – đầu thế kỷ XX với các phát minh như tia X (Röntgen), phóng xạ (Becquerel), điện tử (Thomson) đã chứng minh sự phá sản của quan niệm triết học nào?", "options": ["Chủ nghĩa duy vật biện chứng", "Chủ nghĩa duy vật siêu hình đồng nhất vật chất với nguyên tử và khối lượng bất biến", "Thuyết khả tri luận", "Phép biện chứng của Hêghen"], "correctIndex": 1, "explanation": "Khủng hoảng vật lý học cuối TK XIX – đầu TK XX làm phá sản CNDV siêu hình đồng nhất vật chất với nguyên tử/khối lượng bất biến (Chương 2, Mục I.1)."}, {"id": 13, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Trong định nghĩa vật chất của V.I. Lênin (*Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán*, 1909), thuộc tính chung nhất, phổ biến nhất của mọi dạng vật chất là:", "options": ["Có khối lượng và quảng tính", "Có thể nhìn thấy bằng mắt thường", "Thực tại khách quan, tồn tại không lệ thuộc vào cảm giác", "Tồn tại ở trạng thái tĩnh tại tuyệt đối"], "correctIndex": 2, "explanation": "Định nghĩa vật chất của V.I. Lênin xác định thuộc tính chung nhất của vật chất là \"thực tại khách quan\", tồn tại không lệ thuộc vào cảm giác (Chương 2, Mục I.1)."}, {"id": 14, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Theo Ph. Ăngghen, trong 5 hình thức vận động cơ bản của vật chất, hình thức vận động nào là cao nhất và phức tạp nhất?", "options": ["Vận động cơ học", "Vận động hóa học", "Vận động sinh học", "Vận động xã hội"], "correctIndex": 3, "explanation": "5 hình thức vận động từ thấp đến cao: cơ -> lý -> hóa -> sinh -> xã hội (cao nhất) (Chương 2, Mục I.1)."}, {"id": 15, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Quan điểm đúng của chủ nghĩa duy vật biện chứng về mối quan hệ giữa vận động và đứng im là:", "options": ["Vận động là tuyệt đối, đứng im là tương đối và tạm thời", "Vận động và đứng im đều mang tính tuyệt đối như nhau", "Đứng im là tuyệt đối, vận động chỉ là tương đối", "Thế giới chỉ có vận động, hoàn toàn không có trạng thái đứng im"], "correctIndex": 0, "explanation": "Vận động là tuyệt đối, vĩnh viễn; đứng im là tương đối, tạm thời (trạng thái cân bằng của vận động) (Chương 2, Mục I.1)."}, {"id": 16, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Nhân tố nào giữ vai trò quyết định trực tiếp (nguồn gốc xã hội) đối với sự hình thành và phát triển ý thức con người?", "options": ["Bộ óc người và thế giới khách quan", "Phản ánh sinh học và tính kích thích", "Lao động và ngôn ngữ", "Khí hậu và môi trường tự nhiên"], "correctIndex": 2, "explanation": "Lao động và ngôn ngữ là nguồn gốc xã hội, giữ vai trò quyết định trực tiếp sự ra đời của ý thức (Chương 2, Mục I.2)."}, {"id": 17, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Trong kết cấu của ý thức xét theo các yếu tố hợp thành (chiều ngang), yếu tố nào giữ vai trò là cốt lõi, phương thức tồn tại của ý thức?", "options": ["Tình cảm", "Niềm tin", "Tri thức", "Vô thức"], "correctIndex": 2, "explanation": "Trong kết cấu chiều ngang (tri thức, tình cảm, niềm tin, ý chí), tri thức là yếu tố cơ bản, cốt lõi nhất (Chương 2, Mục I.2)."}, {"id": 18, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, ý thức tác động trở lại vật chất bằng con đường nào?", "options": ["Tự thân ý thức trực tiếp biến đổi thế giới vật chất mà không cần hành động", "Thông qua hoạt động thực tiễn của con người", "Thông qua cầu nguyện và nghi lễ tâm linh", "Ý thức hoàn toàn thụ động, không thể tác động trở lại vật chất"], "correctIndex": 1, "explanation": "Ý thức tự nó không trực tiếp biến đổi vật chất mà phải thông qua hoạt động thực tiễn của con người (Chương 2, Mục I.3)."}, {"id": 19, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Nguyên tắc phương pháp luận cơ bản rút ra từ mối quan hệ biện chứng giữa vật chất và ý thức là:", "options": ["Tuyệt đối hóa ý chí chủ quan của con người, bất chấp hoàn cảnh", "Tôn trọng tính khách quan kết hợp phát huy tính năng động chủ quan", "Chờ đợi điều kiện khách quan tự biến đổi, không cần nỗ lực chủ quan", "Tách rời lý luận khỏi thực tiễn"], "correctIndex": 1, "explanation": "Nguyên tắc PPL: Tôn trọng tính khách quan kết hợp phát huy tính năng động chủ quan (Chương 2, Mục I.3)."}, {"id": 20, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Từ nguyên lý về mối liên hệ phổ biến, chúng ta rút ra những quan điểm phương pháp luận nào sau đây?", "options": ["Quan điểm siêu hình và quan điểm bảo thủ", "Quan điểm phiến diện và quan điểm chiết trung", "Quan điểm toàn diện và quan điểm lịch sử – cụ thể", "Quan điểm duy ý chí và quan điểm kinh nghiệm chủ nghĩa"], "correctIndex": 2, "explanation": "Từ nguyên lý mối liên hệ phổ biến rút ra quan điểm toàn diện và quan điểm lịch sử – cụ thể (Chương 2, Mục II.2)."}, {"id": 21, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Theo phép biện chứng duy vật, khẳng định nào sau đây là ĐÚNG khi so sánh \"vận động\" và \"phát triển\"?", "options": ["Mọi sự vận động đều là sự phát triển", "Phát triển là một trường hợp đặc biệt của vận động – vận động theo khuynh hướng đi lên, từ thấp đến cao, từ chất cũ đến chất mới", "Vận động và phát triển là hai khái niệm hoàn toàn đồng nhất", "Phát triển chỉ là sự tăng lên thuần túy về mặt số lượng"], "correctIndex": 1, "explanation": "Phát triển là vận động theo khuynh hướng đi lên, từ thấp đến cao, tạo ra chất mới hoàn thiện hơn (Chương 2, Mục II.2)."}, {"id": 22, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Trong cặp phạm trù cái chung và cái riêng, khẳng định nào sau đây chuẩn xác theo triết học Mác – Lênin?", "options": ["Cái chung tồn tại độc lập bên ngoài và sinh ra cái riêng", "Cái riêng hoàn toàn đồng nhất với cái chung", "Cái chung chỉ tồn tại trong cái riêng, thông qua cái riêng mà biểu hiện sự tồn tại của mình", "Cái chung phong phú và đa dạng hơn cái riêng"], "correctIndex": 2, "explanation": "Cái chung chỉ tồn tại trong cái riêng và biểu hiện thông qua cái riêng (Chương 2, Mục II.2)."}, {"id": 23, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Trong cặp phạm trù nguyên nhân và kết quả, yếu tố nào giúp nguyên nhân chuyển hóa thành kết quả nhưng tự bản thân nó không trực tiếp sinh ra kết quả?", "options": ["Nguyên cớ", "Điều kiện", "Hiện tượng", "Cái đơn nhất"], "correctIndex": 1, "explanation": "Điều kiện là những yếu tố cần thiết giúp nguyên nhân phát sinh kết quả, tự nó không sinh ra kết quả (Chương 2, Mục II.2)."}, {"id": 24, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Quy luật nào của phép biện chứng duy vật chỉ ra **cách thức** chung nhất của sự vận động và phát triển, trong đó bệnh \"tả khuynh\" là nôn nóng đốt cháy giai đoạn khi chưa tích lũy đủ về lượng?", "options": ["Quy luật thống nhất và đấu tranh giữa các mặt đối lập", "Quy luật chuyển hóa từ những thay đổi về lượng dẫn đến những thay đổi về chất và ngược lại", "Quy luật phủ định của phủ định", "Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất"], "correctIndex": 1, "explanation": "Quy luật lượng – chất chỉ ra **cách thức** phát triển; nôn nóng, đốt cháy giai đoạn khi chưa đủ lượng là bệnh tả khuynh (Chương 2, Mục II.2)."}, {"id": 25, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Quy luật nào được V.I. Lênin xác định là **\"hạt nhân của phép biện chứng\"** vì nó chỉ ra nguồn gốc, động lực bên trong của mọi sự vận động và phát triển?", "options": ["Quy luật lượng – chất", "Quy luật phủ định của phủ định", "Quy luật thống nhất và đấu tranh giữa các mặt đối lập (Quy luật mâu thuẫn)", "Quy luật cơ sở hạ tầng quyết định kiến trúc thượng tầng"], "correctIndex": 2, "explanation": "Quy luật thống nhất và đấu tranh giữa các mặt đối lập là \"hạt nhân của phép biện chứng\" (Chương 2, Mục II.2)."}, {"id": 26, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Đặc trưng cơ bản nhất phân biệt phủ định biện chứng với phủ định siêu hình là:", "options": ["Tính chủ quan và tính xóa bỏ hoàn toàn cái cũ", "Tính khách quan (tự thân phủ định) và tính kế thừa", "Tính ngẫu nhiên và tính lặp lại nguyên xi cái cũ", "Tính bất biến và tính tuần hoàn khép kín"], "correctIndex": 1, "explanation": "Hai đặc trưng của phủ định biện chứng: tính khách quan (tự thân) và tính kế thừa (Chương 2, Mục II.2)."}, {"id": 27, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Trong các hình thức cơ bản của thực tiễn, hình thức nào đóng vai trò cơ bản nhất và quyết định nhất đối với các hình thức khác?", "options": ["Hoạt động thực nghiệm khoa học", "Hoạt động chính trị – xã hội", "Hoạt động sản xuất vật chất", "Hoạt động sáng tác nghệ thuật"], "correctIndex": 2, "explanation": "Hoạt động sản xuất vật chất là hình thức thực tiễn cơ bản và quyết định nhất (Chương 2, Mục III.2)."}, {"id": 28, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Trình tự ba hình thức của giai đoạn nhận thức cảm tính (trực quan sinh động) từ thấp đến cao là:", "options": ["Khái niệm -> Phán đoán -> Suy lý", "Tri giác -> Cảm giác -> Biểu tượng", "Cảm giác -> Tri giác -> Biểu tượng", "Biểu tượng -> Khái niệm -> Thực tiễn"], "correctIndex": 2, "explanation": "Nhận thức cảm tính gồm: Cảm giác -> Tri giác -> Biểu tượng (Chương 2, Mục III.3)."}, {"id": 29, "chapterId": 2, "chapter": "Chương 2: Chủ nghĩa duy vật biện chứng", "question": "Theo lý luận nhận thức duy vật biện chứng, nhận định nào sau đây KHÔNG đúng về chân lý?", "options": ["Nội dung của chân lý mang tính khách quan", "Chân lý là bất biến, tách rời khỏi mọi điều kiện không gian, thời gian cụ thể", "Chân lý có sự thống nhất giữa tính tương đối và tính tuyệt đối", "Thực tiễn là tiêu chuẩn duy nhất để kiểm tra chân lý"], "correctIndex": 1, "explanation": "Chân lý luôn mang **tính cụ thể** (gắn với không gian, thời gian, điều kiện xác định), không có chân lý trừu tượng phi điều kiện (Chương 2, Mục III.4)."}, {"id": 30, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong ba phương diện của sản xuất xã hội (sản xuất vật chất, sản xuất tinh thần, sản xuất ra bản thân con người), hoạt động nào giữ vai trò nền tảng, quyết định toàn bộ sự vận động và phát triển của xã hội?", "options": ["Sản xuất tinh thần", "Sản xuất ra bản thân con người", "Sản xuất vật chất", "Hoạt động trao đổi thương mại"], "correctIndex": 2, "explanation": "Sản xuất vật chất là cơ sở của sự tồn tại và phát triển xã hội (Chương 3, Mục I.1)."}, {"id": 31, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "C. Mác khẳng định: *\"Các thời đại kinh tế khác nhau không phải ở chỗ chúng sản xuất ra cái gì, mà là ở chỗ chúng sản xuất bằng cách nào, với những tư liệu lao động nào.\"* Trong lực lượng sản xuất, yếu tố nào là **yếu tố động nhất, cách mạng nhất**?", "options": ["Đối tượng lao động", "Công cụ lao động", "Phương tiện vận tải", "Nguyên liệu hóa học"], "correctIndex": 1, "explanation": "Trong LLSX, người lao động là quyết định hàng đầu; **công cụ lao động** là yếu tố động nhất, cách mạng nhất, phân biệt các thời đại kinh tế (Chương 3, Mục I.2)."}, {"id": 32, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong ba mặt cấu thành quan hệ sản xuất, quan hệ nào giữ vai trò xuất phát, cơ bản và quyết định nhất (còn quan hệ phân phối được xem là \"chất xúc tác\" kinh tế)?", "options": ["Quan hệ trong tổ chức và quản lý sản xuất", "Quan hệ trong phân phối sản phẩm lao động", "Quan hệ sở hữu đối với tư liệu sản xuất", "Quan hệ tiêu dùng hàng hóa"], "correctIndex": 2, "explanation": "Trong 3 mặt của QHSX, quan hệ sở hữu đối với tư liệu sản xuất giữ vai trò quyết định nhất; phân phối là \"chất xúc tác\" kinh tế (Chương 3, Mục I.2)."}, {"id": 33, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Theo chủ nghĩa duy vật lịch sử, quy luật cơ bản nhất của sự vận động và phát triển xã hội loài người là:", "options": ["Quy luật cung – cầu trên thị trường", "Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất", "Quy luật tăng trưởng dân số tự nhiên", "Quy luật tuần hoàn của các nền văn minh"], "correctIndex": 1, "explanation": "Quy luật QHSX phù hợp với trình độ phát triển của LLSX là quy luật cơ bản nhất của sự vận động, phát triển xã hội (Chương 3, Mục I.2)."}, {"id": 34, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Khi nghiên cứu mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng, hai sai lầm cần tránh được Giáo trình chỉ rõ là gì?", "options": ["Tuyệt đối hóa kinh tế dẫn đến duy vật tầm thường (duy vật kinh tế); và tuyệt đối hóa chính trị dẫn đến duy tâm, duy ý chí, đốt cháy giai đoạn", "Coi trọng nhà nước hơn pháp luật; và coi trọng pháp luật hơn đạo đức", "Đổi mới kinh tế quá nhanh; và không xây dựng thiết chế văn hóa", "Duy trì kinh tế nhiều thành phần; và mở cửa hội nhập quốc tế"], "correctIndex": 0, "explanation": "Giáo trình lưu ý 2 sai lầm: tuyệt đối hóa kinh tế -> duy vật tầm thường (duy vật kinh tế); tuyệt đối hóa chính trị -> duy tâm, duy ý chí, đốt cháy giai đoạn (Chương 3, Mục I.3)."}, {"id": 35, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong kiến trúc thượng tầng của xã hội có đối kháng giai cấp, bộ phận nào có quyền lực mạnh nhất và tác động trực tiếp nhất đến cơ sở hạ tầng?", "options": ["Các tổ chức tôn giáo", "Các hội nghề nghiệp và nghệ thuật", "Nhà nước", "Truyền thông và báo chí"], "correctIndex": 2, "explanation": "Trong KTTT, Nhà nước là bộ phận có quyền lực mạnh nhất và tác động trực tiếp nhất đến CSHT (Chương 3, Mục I.3)."}, {"id": 36, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Luận điểm *\"Sự phát triển của các hình thái kinh tế – xã hội là một quá trình lịch sử – tự nhiên\"* có nghĩa là:", "options": ["Lịch sử xã hội phát triển hoàn toàn ngẫu nhiên, không có quy luật", "Lịch sử xã hội phát triển hoàn toàn giống với quy luật sinh học của tự nhiên", "Sự vận động, thay thế các hình thái kinh tế – xã hội diễn ra theo các quy luật khách quan, không phụ thuộc ý muốn chủ quan của con người (nhưng vẫn có thể \"bỏ qua\" một hoặc vài hình thái nếu phù hợp quy luật)", "Mọi quốc gia đều bắt buộc phải trải qua tuần tự đủ 5 hình thái kinh tế – xã hội mà không thể bỏ qua hình thái nào"], "correctIndex": 2, "explanation": "\"Quá trình lịch sử – tự nhiên\" nghĩa là tuân theo quy luật khách quan; từng dân tộc có thể phát triển rút ngắn (\"bỏ qua\") trong điều kiện phù hợp (Chương 3, Mục I.4)."}, {"id": 37, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Xét về thực tiễn vận dụng học thuyết hình thái kinh tế – xã hội ở Việt Nam giai đoạn **1975 – 1986**, nguyên nhân cốt lõi dẫn đến khủng hoảng kinh tế – xã hội là gì?", "options": ["Lực lượng sản xuất phát triển quá cao so với quan hệ sản xuất công hữu", "Xác lập quan hệ sản xuất \"đi trước\" (thuần nhất công hữu, bao cấp, mệnh lệnh hành chính) vượt quá trình độ còn thấp kém của lực lượng sản xuất, vi phạm quy luật khách quan", "Việt Nam chuyển sang kinh tế thị trường quá sớm từ năm 1976", "Không thực hiện thống nhất đất nước về mặt nhà nước"], "correctIndex": 1, "explanation": "Giai đoạn 1975–1986 ở Việt Nam đã xác lập QHSX \"đi trước\" vượt quá trình độ thấp của LLSX, dùng mệnh lệnh hành chính bao cấp nên kìm hãm sản xuất và dẫn tới khủng hoảng (Đề cương vận dụng Chương 3, Mục I)."}, {"id": 38, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Đường lối đổi mới toàn diện ở Việt Nam (bắt đầu từ Đại hội VI – 12/1986) và việc **Đại hội IX (2001)** xác định mô hình **kinh tế thị trường định hướng xã hội chủ nghĩa** thể hiện sự vận dụng sáng tạo quy luật nào của triết học Mác – Lênin?", "options": ["Quy luật phủ định sạch trơn mọi thành tựu của xã hội cũ", "Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất và kết hợp đổi mới đồng bộ CSHT với KTTT", "Quy luật tuyệt đối hóa yếu tố chính trị, bỏ qua quy luật kinh tế", "Quy luật đồng nhất chủ nghĩa xã hội với cơ chế kế hoạch hóa tập trung bao cấp"], "correctIndex": 1, "explanation": "Từ Đại hội VI (1986) đến Đại hội IX (2001) và XIII (2021), kinh tế thị trường định hướng XHCN và đổi mới đồng bộ kinh tế – chính trị là sự vận dụng đúng quy luật QHSX phù hợp LLSX và biện chứng CSHT – KTTT (Đề cương vận dụng Chương 3, Mục I)."}, {"id": 39, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Theo định nghĩa giai cấp của V.I. Lênin (*Sáng kiến vĩ đại*), nguồn gốc **trực tiếp** dẫn đến sự ra đời của giai cấp trong lịch sử là:", "options": ["Sự khác biệt về màu da và ngôn ngữ", "Sự xuất hiện chế độ tư hữu về tư liệu sản xuất", "Sự phân hóa về trình độ học vấn", "Những cuộc chiến tranh tôn giáo"], "correctIndex": 1, "explanation": "Nguồn gốc sâu xa của giai cấp là sự phát triển của LLSX tạo của cải dư thừa; nguồn gốc trực tiếp là chế độ tư hữu về TLSX (Chương 3, Mục II.1)."}, {"id": 40, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong xã hội có đối kháng giai cấp, động lực **trực tiếp và quan trọng** thúc đẩy sự phát triển của lịch sử là:", "options": ["Sự hòa giải tự phát giữa các giai cấp", "Đấu tranh giai cấp", "Sự thay đổi khí hậu toàn cầu", "Hoạt động từ thiện xã hội"], "correctIndex": 1, "explanation": "Đấu tranh giai cấp là động lực trực tiếp, quan trọng thúc đẩy lịch sử trong xã hội có đối kháng giai cấp (Chương 3, Mục II.1)."}, {"id": 41, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Thứ tự các hình thức cộng đồng người từ thấp đến cao trong lịch sử nhân loại trước và đến khi hình thành dân tộc là:", "options": ["Bộ lạc -> Thị tộc -> Bộ tộc -> Dân tộc", "Thị tộc -> Bộ tộc -> Bộ lạc -> Dân tộc", "Thị tộc -> Bộ lạc -> Bộ tộc -> Dân tộc", "Bộ tộc -> Thị tộc -> Bộ lạc -> Dân tộc"], "correctIndex": 2, "explanation": "Thứ tự các hình thức cộng đồng người: Thị tộc -> Bộ lạc -> Bộ tộc -> Dân tộc (Chương 3, Mục II.2)."}, {"id": 42, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Điểm đặc thù nổi bật trong sự hình thành dân tộc ở Việt Nam và nhiều nước phương Đông so với phương Tây là:", "options": ["Hình thành muộn, gắn liền với sự phát triển của chủ nghĩa tư bản", "Hình thành rất sớm trước chủ nghĩa tư bản, gắn liền với nhu cầu trị thủy (sản xuất nông nghiệp) và chống giặc ngoại xâm", "Không cần có lãnh thổ chung và ngôn ngữ chung", "Hoàn toàn do các đế quốc phương Tây thiết lập từ thế kỷ XX"], "correctIndex": 1, "explanation": "Dân tộc Việt Nam và nhiều nước phương Đông hình thành rất sớm trước CNTB, gắn với trị thủy (nông nghiệp) và chống ngoại xâm (Chương 3, Mục II.2)."}, {"id": 43, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Theo quan điểm của chủ nghĩa Mác – Lênin, nguyên nhân **trực tiếp** dẫn đến sự ra đời của Nhà nước là:", "options": ["Thỏa thuận tự nguyện giữa mọi thành viên trong thị tộc (khế ước xã hội)", "Ý muốn của Thượng đế ban xuống cho bậc quân vương", "Mâu thuẫn giai cấp phát triển đến mức không thể điều hòa được", "Nhu cầu mở rộng giao thương quốc tế"], "correctIndex": 2, "explanation": "Nhà nước ra đời trực tiếp khi mâu thuẫn giai cấp phát triển đến mức không thể điều hòa được (Chương 3, Mục III.1)."}, {"id": 44, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Đâu KHÔNG phải là một trong ba đặc trưng cơ bản phân biệt Nhà nước với tổ chức thị tộc – bộ lạc?", "options": ["Quản lý dân cư theo đơn vị hành chính – lãnh thổ", "Thiết lập bộ máy quyền lực chuyên nghiệp mang tính cưỡng chế", "Quy định hệ thống thuế khóa để duy trì hoạt động của bộ máy nhà nước", "Tổ chức phân công lao động hoàn toàn dựa trên quan hệ huyết thống"], "correctIndex": 3, "explanation": "Quản lý theo huyết thống là đặc trưng của thị tộc – bộ lạc, không phải của Nhà nước (Nhà nước quản lý theo lãnh thổ) (Chương 3, Mục III.1)."}, {"id": 45, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Sự kiện chính trị nào sau đây chỉ làm thay đổi nhóm người cầm quyền này bằng nhóm người cầm quyền khác mà KHÔNG làm thay đổi bản chất chế độ kinh tế – xã hội?", "options": ["Cách mạng xã hội", "Đảo chính", "Cách mạng công nghiệp", "Khởi nghĩa giành chính quyền của giai cấp tiến bộ"], "correctIndex": 1, "explanation": "Đảo chính chỉ thay đổi nhóm cầm quyền, không làm thay đổi bản chất chế độ xã hội như cách mạng xã hội (Chương 3, Mục III.2)."}, {"id": 46, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong ba yếu tố cơ bản của **tồn tại xã hội** (phương thức sản xuất vật chất, điều kiện tự nhiên – hoàn cảnh địa lý, dân số và mật độ dân số), yếu tố nào giữ vai trò quyết định nhất?", "options": ["Điều kiện tự nhiên – hoàn cảnh địa lý", "Dân số và mật độ dân số", "Phương thức sản xuất vật chất", "Cả ba yếu tố có vai trò ngang nhau tuyệt đối"], "correctIndex": 2, "explanation": "Trong 3 yếu tố của tồn tại xã hội, phương thức sản xuất vật chất giữ vai trò cơ bản, quyết định nhất (Chương 3, Mục IV.1)."}, {"id": 47, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong 7 hình thái ý thức xã hội, hình thái nào phản ánh thế giới hiện thực một cách **hoang đường, hư ảo** thông qua chức năng đền bù – hư ảo tâm lý?", "options": ["Ý thức thẩm mỹ (nghệ thuật)", "Ý thức tôn giáo", "Ý thức đạo đức", "Ý thức khoa học"], "correctIndex": 1, "explanation": "Ý thức tôn giáo phản ánh hiện thực một cách hoang đường, hư ảo, thực hiện chức năng đền bù – hư ảo (Chương 3, Mục IV.2)."}, {"id": 48, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Nhận định nào sau đây thể hiện **tính độc lập tương đối** của ý thức xã hội so với tồn tại xã hội?", "options": ["Ý thức xã hội luôn biến đổi tức thì và đồng bộ với mọi thay đổi của tồn tại xã hội", "Ý thức xã hội chỉ có thể lạc hậu hơn tồn tại xã hội, không bao giờ vượt trước", "Ý thức xã hội thường lạc hậu hơn, nhưng trong những điều kiện nhất định có thể vượt trước tồn tại xã hội, có tính kế thừa và tác động trở lại tồn tại xã hội", "Ý thức xã hội quyết định sự ra đời của tồn tại xã hội"], "correctIndex": 2, "explanation": "5 biểu hiện tính độc lập tương đối của YTXH: thường lạc hậu hơn, có thể vượt trước, tính kế thừa, tác động qua lại giữa các hình thái, tác động trở lại TTXH (Chương 3, Mục IV.3)."}, {"id": 49, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Trong *Luận cương về Phơbách* (luận cương số 6), C. Mác khẳng định: *\"Trong tính hiện thực của nó, bản chất con người là...\"*:", "options": ["Một thực thể sinh học thuần túy bị chi phối bởi bản năng", "Tổng hòa những quan hệ xã hội", "Một cái trừu tượng cố hữu nằm sẵn trong từng cá nhân riêng biệt", "Sự tha hóa của ý niệm tuyệt đối"], "correctIndex": 1, "explanation": "Theo C. Mác (*Luận cương về Phơbách* số 6): \"Trong tính hiện thực của nó, bản chất con người là tổng hòa những quan hệ xã hội\" (Chương 3, Mục V.1)."}, {"id": 50, "chapterId": 3, "chapter": "Chương 3: Chủ nghĩa duy vật lịch sử & Vận dụng ở VN", "question": "Theo quan điểm của triết học Mác – Lênin về vai trò của quần chúng nhân dân và lãnh tụ (vĩ nhân) trong lịch sử, khẳng định nào sau đây là ĐÚNG?", "options": ["Vĩ nhân, lãnh tụ là lực lượng duy nhất sáng tạo và quyết định lịch sử", "Quần chúng nhân dân chỉ là đám đông thụ động đi theo ý chí của cá nhân kiệt xuất", "Quần chúng nhân dân là lực lượng sáng tạo chân chính quyết định lịch sử; lãnh tụ có vai trò to lớn, quan trọng trong việc định hướng, tổ chức và dẫn dắt phong trào", "Lịch sử phát triển không cần đến vai trò của bất kỳ cá nhân hay lãnh tụ nào"], "correctIndex": 2, "explanation": "Quần chúng nhân dân là chủ thể sáng tạo chân chính quyết định lịch sử; lãnh tụ/vĩ nhân có vai trò to lớn, quan trọng (Chương 3, Mục V.3)."}];
+    const LETTERS = ['A', 'B', 'C', 'D'];
+    const STORAGE_KEY = 'triet_hoc_mln_50q_state_v1';
+
+    let state = {
+      mode: 'practice', // 'practice' | 'exam'
+      filter: 'all',    // 'all' | '1' | '2' | '3' | 'wrong'
+      order: QUESTIONS.map((_, i) => i),
+      currentPos: 0,
+      answers: {},      // { [questionId]: optionIndex }
+      examSubmitted: false,
+      secondsLeft: 45 * 60
+    };
+
+    let timerHandle = null;
+
+    const el = {
+      modePractice: document.getElementById('mode-practice'),
+      modeExam: document.getElementById('mode-exam'),
+      btnShuffle: document.getElementById('btn-shuffle'),
+      btnReset: document.getElementById('btn-reset'),
+      filterBtns: Array.from(document.querySelectorAll('.filter-btn')),
+      statProgress: document.getElementById('stat-progress'),
+      statScore: document.getElementById('stat-score'),
+      examTimer: document.getElementById('exam-timer'),
+      btnSubmitExam: document.getElementById('btn-submit-exam'),
+      examSummary: document.getElementById('exam-summary'),
+      summaryScoreText: document.getElementById('summary-score-text'),
+      summaryMessage: document.getElementById('summary-message'),
+      chapterBreakdown: document.getElementById('chapter-breakdown'),
+      qChapter: document.getElementById('q-chapter'),
+      qCounter: document.getElementById('q-counter'),
+      qHeading: document.getElementById('question-heading'),
+      optionsContainer: document.getElementById('options-container'),
+      explanationBox: document.getElementById('explanation-box'),
+      explanationStatus: document.getElementById('explanation-status'),
+      explanationText: document.getElementById('explanation-text'),
+      btnPrev: document.getElementById('btn-prev'),
+      btnNext: document.getElementById('btn-next'),
+      navGrid: document.getElementById('nav-grid'),
+      reviewList: document.getElementById('review-list'),
+      announcer: document.getElementById('live-announcer')
+    };
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (_) {}
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if (parsed && Array.isArray(parsed.order) && parsed.order.length === QUESTIONS.length) {
+          state = { ...state, ...parsed };
+        }
+      } catch (_) {}
+    }
+
+    function announce(msg) {
+      el.announcer.textContent = '';
+      window.setTimeout(() => {
+        el.announcer.textContent = msg;
+      }, 30);
+    }
+
+    function getFilteredIndices() {
+      return state.order.filter((qIdx) => {
+        const q = QUESTIONS[qIdx];
+        if (state.filter === 'all') return true;
+        if (state.filter === 'wrong') {
+          const ans = state.answers[q.id];
+          const revealed = state.mode === 'practice' || state.examSubmitted;
+          return revealed && ans !== undefined && ans !== q.correctIndex;
+        }
+        return String(q.chapterId) === state.filter;
+      });
+    }
+
+    function formatTime(sec) {
+      const m = String(Math.floor(sec / 60)).padStart(2, '0');
+      const s = String(sec % 60).padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    function syncTimer() {
+      if (timerHandle) {
+        clearInterval(timerHandle);
+        timerHandle = null;
+      }
+      const showTimer = state.mode === 'exam' && !state.examSubmitted;
+      el.examTimer.hidden = state.mode !== 'exam';
+      el.btnSubmitExam.hidden = state.mode !== 'exam' || state.examSubmitted;
+      el.examTimer.textContent = formatTime(state.secondsLeft);
+
+      if (showTimer) {
+        timerHandle = window.setInterval(() => {
+          if (state.secondsLeft <= 1) {
+            state.secondsLeft = 0;
+            el.examTimer.textContent = '00:00';
+            submitExam(true);
+            return;
+          }
+          state.secondsLeft -= 1;
+          el.examTimer.textContent = formatTime(state.secondsLeft);
+          saveState();
+        }, 1000);
+      }
+    }
+
+    function renderReviewList() {
+      el.reviewList.innerHTML = '';
+      QUESTIONS.forEach((q) => {
+        const li = document.createElement('li');
+        li.className = 'review-item';
+        const correctLetter = LETTERS[q.correctIndex];
+        li.innerHTML = '';
+        const title = document.createElement('div');
+        title.style.fontWeight = '700';
+        title.textContent = `Câu ${q.id}. ${q.question}`;
+        const ansLine = document.createElement('div');
+        ansLine.style.marginTop = '0.35rem';
+        ansLine.textContent = `Đáp án đúng: ${correctLetter}. ${q.options[q.correctIndex]}`;
+        const expLine = document.createElement('div');
+        expLine.style.marginTop = '0.25rem';
+        expLine.style.fontSize = '0.9rem';
+        expLine.textContent = `Giải thích: ${q.explanation}`;
+        li.append(title, ansLine, expLine);
+        el.reviewList.appendChild(li);
+      });
+    }
+
+    function renderStatsAndSummary() {
+      const totalAnswered = Object.keys(state.answers).length;
+      el.statProgress.textContent = `Đã trả lời: ${totalAnswered} / ${QUESTIONS.length}`;
+
+      const showScore = state.mode === 'practice' || state.examSubmitted;
+      let correctCount = 0;
+      QUESTIONS.forEach((q) => {
+        if (state.answers[q.id] === q.correctIndex) correctCount += 1;
+      });
+      el.statScore.textContent = showScore
+        ? `Đúng: ${correctCount} / ${QUESTIONS.length} (${((correctCount / QUESTIONS.length) * 10).toFixed(1)} điểm)`
+        : `Chế độ thi thử: chấm sau khi nộp bài`;
+
+      if (state.mode === 'exam' && state.examSubmitted) {
+        el.examSummary.hidden = false;
+        const score10 = ((correctCount / QUESTIONS.length) * 10).toFixed(2);
+        el.summaryScoreText.textContent = `${correctCount} / ${QUESTIONS.length} câu đúng — Điểm quy đổi: ${score10} / 10`;
+        el.summaryMessage.textContent = correctCount >= 40
+          ? 'Rất vững kiến thức toàn bộ 3 chương! Bạn đã sẵn sàng cho bài kiểm tra.'
+          : correctCount >= 28
+            ? 'Khá ổn! Bạn hãy lọc "Câu làm sai" ở trên để ôn kỹ những phần còn nhầm.'
+            : 'Bạn nên đọc lại bản tóm tắt từng chương rồi bấm "Làm lại từ đầu" để luyện thêm.';
+
+        el.chapterBreakdown.innerHTML = '';
+        [1, 2, 3].forEach((cid) => {
+          const qs = QUESTIONS.filter((q) => q.chapterId === cid);
+          const ok = qs.filter((q) => state.answers[q.id] === q.correctIndex).length;
+          const li = document.createElement('li');
+          li.textContent = `${qs[0].chapter}: đúng ${ok} / ${qs.length} câu`;
+          el.chapterBreakdown.appendChild(li);
+        });
+      } else {
+        el.examSummary.hidden = true;
+      }
+    }
+
+    function render() {
+      el.modePractice.setAttribute('aria-pressed', String(state.mode === 'practice'));
+      el.modeExam.setAttribute('aria-pressed', String(state.mode === 'exam'));
+      el.filterBtns.forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.filter === state.filter));
+      });
+
+      renderStatsAndSummary();
+
+      const filtered = getFilteredIndices();
+      el.navGrid.innerHTML = '';
+
+      if (filtered.length === 0) {
+        el.qChapter.textContent = 'Bộ lọc: Câu làm sai';
+        el.qCounter.textContent = '0 câu';
+        el.qHeading.textContent = 'Hiện chưa có câu nào làm sai trong chế độ hiện tại.';
+        el.optionsContainer.innerHTML = '';
+        el.explanationBox.hidden = true;
+        el.btnPrev.disabled = true;
+        el.btnNext.disabled = true;
+        return;
+      }
+
+      if (state.currentPos >= filtered.length) state.currentPos = 0;
+      if (state.currentPos < 0) state.currentPos = 0;
+
+      const currentQ = QUESTIONS[filtered[state.currentPos]];
+      const selectedIdx = state.answers[currentQ.id];
+      const isRevealed = (state.mode === 'practice' && selectedIdx !== undefined) || state.examSubmitted;
+
+      el.qChapter.textContent = currentQ.chapter;
+      el.qCounter.textContent = `Câu ${currentQ.id} (vị trí ${state.currentPos + 1} / ${filtered.length})`;
+      el.qHeading.textContent = `Câu ${currentQ.id}. ${currentQ.question}`;
+
+      el.optionsContainer.innerHTML = '';
+      currentQ.options.forEach((optText, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'option-btn';
+        btn.setAttribute('aria-pressed', String(selectedIdx === idx));
+
+        let statusLabel = '';
+        if (isRevealed) {
+          if (idx === currentQ.correctIndex) {
+            btn.classList.add('is-correct');
+            statusLabel = '✓ Đúng';
+          } else if (selectedIdx === idx) {
+            btn.classList.add('is-wrong');
+            statusLabel = '✕ Sai';
+          }
+        } else if (selectedIdx === idx) {
+          btn.classList.add('is-selected');
+          statusLabel = '● Đã chọn';
+        }
+
+        if (isRevealed) {
+          btn.disabled = true;
+        }
+
+        const keySpan = document.createElement('span');
+        keySpan.className = 'option-key';
+        keySpan.textContent = LETTERS[idx];
+
+        const bodySpan = document.createElement('span');
+        bodySpan.className = 'option-body';
+        bodySpan.textContent = optText;
+
+        btn.append(keySpan, bodySpan);
+
+        if (statusLabel) {
+          const stSpan = document.createElement('span');
+          stSpan.className = 'option-status';
+          stSpan.textContent = statusLabel;
+          btn.appendChild(stSpan);
+        }
+
+        btn.addEventListener('click', () => handleSelectOption(currentQ, idx));
+        el.optionsContainer.appendChild(btn);
+      });
+
+      if (isRevealed) {
+        el.explanationBox.hidden = false;
+        el.explanationBox.classList.remove('is-correct', 'is-wrong');
+        if (selectedIdx === currentQ.correctIndex) {
+          el.explanationBox.classList.add('is-correct');
+          el.explanationStatus.textContent = `✓ Chính xác (Đáp án ${LETTERS[currentQ.correctIndex]})`;
+        } else if (selectedIdx === undefined) {
+          el.explanationBox.classList.add('is-wrong');
+          el.explanationStatus.textContent = `✕ Chưa chọn đáp án — Đáp án đúng là ${LETTERS[currentQ.correctIndex]}`;
+        } else {
+          el.explanationBox.classList.add('is-wrong');
+          el.explanationStatus.textContent = `✕ Chưa đúng — Đáp án đúng là ${LETTERS[currentQ.correctIndex]}`;
+        }
+        el.explanationText.textContent = currentQ.explanation;
+      } else {
+        el.explanationBox.hidden = true;
+      }
+
+      el.btnPrev.disabled = state.currentPos === 0;
+      el.btnNext.disabled = state.currentPos === filtered.length - 1;
+
+      // Render navigator grid
+      filtered.forEach((qIdx, pos) => {
+        const q = QUESTIONS[qIdx];
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'q-dot';
+        const ans = state.answers[q.id];
+        const revealed = (state.mode === 'practice' && ans !== undefined) || state.examSubmitted;
+
+        let mark = '';
+        if (revealed) {
+          if (ans === q.correctIndex) {
+            dot.classList.add('is-correct');
+            mark = ' (đúng)';
+          } else if (ans !== undefined) {
+            dot.classList.add('is-wrong');
+            mark = ' (sai)';
+          }
+        } else if (ans !== undefined) {
+          dot.classList.add('is-answered');
+          mark = ' (đã chọn)';
+        }
+
+        if (pos === state.currentPos) {
+          dot.setAttribute('aria-current', 'step');
+        }
+        dot.textContent = String(q.id);
+        dot.setAttribute('aria-label', `Câu ${q.id}${mark}`);
+        dot.addEventListener('click', () => {
+          state.currentPos = pos;
+          saveState();
+          render();
+        });
+        el.navGrid.appendChild(dot);
+      });
+    }
+
+    function handleSelectOption(question, idx) {
+      if (state.mode === 'practice' && state.answers[question.id] !== undefined) return;
+      if (state.mode === 'exam' && state.examSubmitted) return;
+
+      state.answers[question.id] = idx;
+      saveState();
+      render();
+
+      if (state.mode === 'practice') {
+        const ok = idx === question.correctIndex;
+        announce(ok
+          ? `Câu ${question.id}: Chính xác! ${question.explanation}`
+          : `Câu ${question.id}: Chưa đúng. Đáp án đúng là ${LETTERS[question.correctIndex]}. ${question.explanation}`);
+      } else {
+        announce(`Đã chọn đáp án ${LETTERS[idx]} cho câu ${question.id}.`);
+      }
+    }
+
+    function submitExam(isTimeout = false) {
+      state.examSubmitted = true;
+      syncTimer();
+      saveState();
+      render();
+      el.examSummary.focus();
+      announce(isTimeout ? 'Đã hết giờ 45 phút, hệ thống đã tự động nộp bài.' : 'Đã nộp bài thi thử và chấm điểm.');
+    }
+
+    function resetQuiz(newOrder = null) {
+      state.answers = {};
+      state.examSubmitted = false;
+      state.secondsLeft = 45 * 60;
+      state.currentPos = 0;
+      if (newOrder) state.order = newOrder;
+      saveState();
+      syncTimer();
+      render();
+    }
+
+    el.modePractice.addEventListener('click', () => {
+      if (state.mode === 'practice') return;
+      state.mode = 'practice';
+      state.examSubmitted = false;
+      saveState();
+      syncTimer();
+      render();
+      announce('Đã chuyển sang chế độ Luyện tập chấm ngay.');
+    });
+
+    el.modeExam.addEventListener('click', () => {
+      if (state.mode === 'exam') return;
+      state.mode = 'exam';
+      state.answers = {};
+      state.examSubmitted = false;
+      state.secondsLeft = 45 * 60;
+      state.currentPos = 0;
+      state.filter = 'all';
+      saveState();
+      syncTimer();
+      render();
+      announce('Đã bắt đầu chế độ Thi thử 45 phút.');
+    });
+
+    el.btnShuffle.addEventListener('click', () => {
+      const shuffled = [...state.order];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      state.order = shuffled;
+      state.currentPos = 0;
+      saveState();
+      render();
+      announce('Đã xáo trộn thứ tự các câu hỏi.');
+    });
+
+    el.btnReset.addEventListener('click', () => {
+      resetQuiz(QUESTIONS.map((_, i) => i));
+      announce('Đã đặt lại toàn bộ bài làm về trạng thái ban đầu.');
+    });
+
+    el.filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.filter = btn.dataset.filter;
+        state.currentPos = 0;
+        saveState();
+        render();
+      });
+    });
+
+    el.btnSubmitExam.addEventListener('click', () => submitExam(false));
+
+    el.btnPrev.addEventListener('click', () => {
+      if (state.currentPos > 0) {
+        state.currentPos -= 1;
+        saveState();
+        render();
+      }
+    });
+
+    el.btnNext.addEventListener('click', () => {
+      const filtered = getFilteredIndices();
+      if (state.currentPos < filtered.length - 1) {
+        state.currentPos += 1;
+        saveState();
+        render();
+      }
+    });
+
+    loadState();
+    renderReviewList();
+    syncTimer();
+    render();
+  </script>
+</body>
+</html>
